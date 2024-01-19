@@ -1,0 +1,29 @@
+extends ../layouts/layout.pug
+
+block content
+	a(href="main.html") Главная
+	ul
+		li 
+			nav.nav-menu
+				a.active(href="#!")
+					svg.svg-monitoring
+						use(href="./img/spriteSvg.svg#svg-monitoring")
+					span Мониторинг
+				a(href="#!")
+					svg.svg-task
+						use(href="./img/spriteSvg.svg#svg-task")
+					span Текущ задача
+				a(href="#!")
+					svg.svg-rating
+						use(href="./img/spriteSvg.svg#svg-rating")
+					span Рейтинг
+				a(href="#!")
+					svg.svg-profile
+						use(href="./img/spriteSvg.svg#svg-profile")
+					span Профиль
+
+		
+
+
+block variables
+	-var title = "Page";

@@ -1,0 +1,18 @@
+@import "../base/var.scss";
+.nav-menu{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  a{
+	font-size: 12px;
+	color: $menuColor;
+	text-align: center;
+	min-width: remy(90);
+	height: remy(46);
+	span{
+		display: block;
+		margin-top: 8px;
+		}
+	}
+	a.active svg, a:hover svg{color: $accent;}
+}

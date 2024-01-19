@@ -1,0 +1,11 @@
+@import "var.scss";
+svg.svg-monitoring,
+svg.svg-task,
+svg.svg-rating,
+svg.svg-profile{
+	width: remy(32);
+	height: remy(32);
+	color: $dark;
+	transition: .3s; 
+	
+}
