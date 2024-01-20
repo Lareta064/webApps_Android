@@ -1,0 +1,20 @@
+@import "../base/var.scss";
+.single-task-location{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 5;
+	.btn-back{
+		position: absolute;
+		top: remy(16);
+		left: remy(16);
+		z-index: 3;
+	}
+	.single-task-details{
+		position: absolute;
+		bottom:remy(90) ;
+		background-color: #fff;
+	}
+}
