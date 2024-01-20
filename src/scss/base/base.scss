@@ -61,7 +61,7 @@
 	height: 100vh;
   }
   
- 
+ a{display: inline-block;}
   a,
   a:hover {
 	text-decoration: none;
@@ -118,4 +118,7 @@ select:-webkit-autofill:focus {
  
 }
 .container{
+	width: 100%;
+	padding: remy(16);
+	margin: 0 auto;
 }

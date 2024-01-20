@@ -47,6 +47,27 @@
 		</g>
 	</symbol>
 
-
+	<symbol id="svg-chevron" viewBox="0 0 24 25">
+		<g>
+			<path d="M9 5.5L15 12.5L9 19.5" stroke="currentColor" fill="transparent" stroke-width="1.5"
+					stroke-linecap="round" stroke-linejoin="round" />
+		</g>
+	</symbol>
+	<symbol id="svg-exit" viewBox="0 0 19 19">
+		<g>
+			
+			<path
+				d="M6.33472 5.54168C6.3443 3.81978 6.42066 2.88727 7.02896 2.27896C7.72458 1.58334 8.84417 1.58334 11.0833 1.58334H11.875C14.1142 1.58334 15.2338 1.58334 15.9294 2.27896C16.625 2.97459 16.625 4.09417 16.625 6.33334V12.6667C16.625 14.9058 16.625 16.0254 15.9294 16.7211C15.2338 17.4167 14.1142 17.4167 11.875 17.4167H11.0833C8.84417 17.4167 7.72458 17.4167 7.02896 16.7211C6.42066 16.1128 6.3443 15.1802 6.33472 13.4583"
+				stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="transparent"/>
+			<path
+				d="M6.33333 15.4375C4.46736 15.4375 3.53437 15.4375 2.95468 14.8578C2.375 14.2781 2.375 13.3451 2.375 11.4792V7.52083C2.375 5.65486 2.375 4.72187 2.95468 4.14218C3.53437 3.5625 4.46736 3.5625 6.33333 3.5625"
+				stroke="currentColor" stroke-width="1.2" fill="transparent"/>
+			<path
+				d="M11.875 9.49999L4.75 9.49999M4.75 9.49999L6.33333 11.0833M4.75 9.49999L6.33333 7.91666"
+				stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+				stroke-linejoin="round" fill="transparent"/>
+			
+		</g>
+	</symbol>
 
 </svg>

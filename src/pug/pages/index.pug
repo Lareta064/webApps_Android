@@ -1,9 +1,15 @@
 extends ../layouts/layout.pug
 
 block content
-	a(href="main.html") Главная
-	ul
-		li 
+	.container
+		a(href="main.html" style="display: block;") Главная
+		a(href="icons.html" style="display: block;") ICONS
+
+
+		header.header
+			.container
+
+		.nav-menu-panel
 			nav.nav-menu
 				a.active(href="#!")
 					svg.svg-monitoring
@@ -21,7 +27,6 @@ block content
 					svg.svg-profile
 						use(href="./img/spriteSvg.svg#svg-profile")
 					span Профиль
-
 		
 
 

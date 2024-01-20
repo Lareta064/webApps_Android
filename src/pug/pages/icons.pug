@@ -1,0 +1,48 @@
+extends ../layouts/layout.pug
+
+block content
+	.container
+		a(href="main.html") Главная
+
+		ul
+			li
+				svg.svg-exit
+					use(href="./img/spriteSvg.svg#svg-exit")
+				pre.
+					svg.svg-exit
+						use(href="./img/spriteSvg.svg#svg-exit")
+			li
+				svg.svg-chevron
+					use(href="./img/spriteSvg.svg#svg-chevron")
+				pre.
+					svg.svg-chevron
+						use(href="./img/spriteSvg.svg#svg-chevron")			
+			li
+				svg.svg-monitoring
+					use(href="./img/spriteSvg.svg#svg-monitoring")
+				pre.
+					svg.svg-monitoring
+						use(href="./img/spriteSvg.svg#svg-monitoring")
+			li
+				svg.svg-task
+					use(href="./img/spriteSvg.svg#svg-task")
+				pre.
+					svg.svg-task
+						use(href="./img/spriteSvg.svg#svg-task")
+			li
+				svg.svg-rating
+					use(href="./img/spriteSvg.svg#svg-rating")
+				pre.
+					svg.svg-rating
+						use(href="./img/spriteSvg.svg#svg-rating")
+			li
+				svg.svg-profile
+					use(href="./img/spriteSvg.svg#svg-profile")
+				pre.
+					svg.svg-profile
+						use(href="./img/spriteSvg.svg#svg-profile")
+	
+
+
+block variables
+	-var title = "Page";
