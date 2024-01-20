@@ -35,9 +35,13 @@
 }
 /******monitoring*********/
 .header{
-	background-color: $bgColor;
-	text-align: center;
+	background-color: $bodyBg;
+	
 	padding-block: remy(12);
+	.h1{text-align: center;}
+}
+.header-flex{
+	
 }
 .header-sticky{
 	position: sticky;

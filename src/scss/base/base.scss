@@ -54,6 +54,7 @@
 	width: 100%;
 	color: $text;
 	font-family: $font, sans-serif;
+	background-color: $bodyBg;
 	font-size: 16px;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
@@ -132,6 +133,9 @@ select:-webkit-autofill:focus {
  
   box-shadow: 0 0 0px 1000px #ffffff inset;
  
+}
+main{
+	padding-bottom: remy(106);
 }
 .container{
 	width: 100%;

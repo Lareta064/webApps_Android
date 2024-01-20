@@ -1,10 +1,11 @@
+@import "../base/var.scss";
 .monitoring-main{
 	padding: remy(8) 0;
-	background-color: $bgColor;
+	background-color: $bodyBg;
 	.tabs-menu{
 		position: sticky;
-		top:remy(56);
-		background-color: $bgColor;
+		top:remy(48);
+		background-color:$bodyBg;
 		z-index: 4;
 	}
 }

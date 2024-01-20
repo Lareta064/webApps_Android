@@ -1,0 +1,8 @@
+@import "../base/var.scss";
+.single-task-page{
+	.task-card{
+		background-color: $bodyBg;
+		box-shadow: none;
+	}
+	.link-righ{margin-top: remy(10)!important;}
+}
