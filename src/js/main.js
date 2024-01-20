@@ -1,4 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
+	const bodyEl = document.querySelector('body');
+
+	const sortOut = document.querySelector('.sort-block__out');
+	const sortList = document.querySelector('#sort-cat');
+	
+	if (sortList){
+		const sortListItems = sortList.querySelectorAll('.sort-list-cat');
+
+		for (let sortItem of sortListItems){
+			const sortCatActive = sortList.querySelector('.active');
+			sortItem.addEventListener('click', function(e){
+				e.preventDefault();
+				if (sortCatActive) sortCatActive.classList.remove('active');
+				
+				this.classList.add('active');
+				const sortCat = sortItem.querySelector('.cat-type').textContent;
+				sortOut.textContent = sortCat;
+				setTimeout(()=>this.closest('.modal-frame-wrapper').classList.remove('visible'), 500);
+			});
+		}
+	}
 	//====== each group and toggle active class ========
 	const tabs = document.querySelectorAll('.tabs');
 	// На нет и скрипта нет
@@ -35,5 +56,53 @@ document.addEventListener("DOMContentLoaded", function () {
 			})
 		}
 	}
+
+	/* =============== modal с атрибутом frame-modal ===============*/
+	const modalFramesOpen = document.querySelectorAll('[frame-btn]');
+	const modalFrames = document.querySelectorAll('[frame-modal]');
+	if (modalFrames.length > 0) {
+		const modalFramesClose = document.querySelectorAll('[frame-close]');
+
+		for (let item of modalFramesOpen) {
+			item.addEventListener('click', function (e) {
+				for (let item of modalFrames) {
+					item.classList.remove('visible');
+
+					bodyEl.classList.remove('lock');
+				}
+				e.preventDefault();
+				const itemAttr = item.getAttribute('frame-btn');
+
+				for (let frame of modalFrames) {
+					const frameAttr = frame.getAttribute('frame-modal');
+					if (frameAttr == itemAttr) {
+						frame.classList.add('visible');
+						bodyEl.classList.add('lock');
+
+					}
+				}
+			});
+		}
+		/*==  закрыть модалки  frame-modal по клику на крестик ======*/
+		for (let item of modalFramesClose) {
+			item.addEventListener('click', function (e) {
+				e.preventDefault();
+				item.closest('[frame-modal]').classList.remove('visible');
+				bodyEl.classList.remove('lock');
+
+
+			});
+		}
+		/*=============== закрыть модалки по клику вне ===============*/
+		for (let frame of modalFrames) {
+			frame.addEventListener('click', function (e) {
+				if (e.target === e.currentTarget) {
+					this.classList.remove(`visible`);
+					bodyEl.classList.remove('lock');
+				}
+			});
+		}
+	}
+
 });
 

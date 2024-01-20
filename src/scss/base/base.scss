@@ -53,7 +53,7 @@
 	padding: 0;
 	width: 100%;
 	color: $text;
-	font-family: $font;
+	font-family: $font, sans-serif;
 	font-size: 16px;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
@@ -135,6 +135,19 @@ select:-webkit-autofill:focus {
 }
 .container{
 	width: 100%;
-	padding: remy(16);
+	max-width: remy(375);
+	padding-inline: remy(16);
 	margin: 0 auto;
+}
+
+.base-list{
+	a {
+		display: flex;
+		align-items: center;
+		column-gap: remy(8);
+		padding: remy(20) remy(20) remy(19);
+		border-top: 1px solid $lightGrey;
+		color: $text;
+	}
+	a.active{color: $accent;}
 }

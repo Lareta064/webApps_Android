@@ -7,25 +7,23 @@
 }
 
 .tabs-menu {
-	width: fit-content;
+	width: calc(50vw + 50% - 1rem);
 	z-index: 3;
 
-	@media (max-width: remy(767)) {
-		overflow: hidden;
-		overflow-x: auto;
-		scrollbar-width: none;
+	overflow: hidden;
+	overflow-x: auto;
+	scrollbar-width: none;
 
-		&::-webkit-scrollbar {
-			display: none;
-		}
+	&::-webkit-scrollbar {
+		display: none;
 	}
+	
 }
 
 .tabs-menu nav {
 	display: flex;
 	column-gap: 4px;
-
-
+	width: calc(100% + 2rem);
 }
 
 .tabs-menu__item {

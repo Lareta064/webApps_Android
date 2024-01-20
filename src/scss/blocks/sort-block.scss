@@ -1,0 +1,22 @@
+.sort-block{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	column-gap:remy(8);
+}
+.sort-block__out{
+	position: relative;
+	padding-left: remy(12);
+	
+	&:not(:empty):before{
+		content: '';
+		width: remy(4);
+		height: remy(4);
+		border-radius: 50%;
+		background-color: $lightGrey;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}

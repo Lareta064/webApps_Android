@@ -1,0 +1,106 @@
+@import "../base/var.scss";
+/*=======MODAL POP UP====*/
+*[frame-modal] {
+	transform: scale(0);
+	transition: .3s; 
+}
+
+*.visible[frame-modal] {
+	transform: scale(1);
+	display: flex;
+	z-index: 10;
+	animation-name: opacity;
+	animation-duration: .3s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+.modal-frame-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(51, 51, 51, 0.7);
+	// backdrop-filter: blur(15px);
+	overflow: hidden;
+	overflow-y: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: remy(50);
+	padding-bottom: remy(50);
+	
+	@media (max-width: remy(767)) {
+		padding-top: remy(30);
+		padding-bottom: remy(30);
+	}
+}
+
+.modal-frame{
+	position: relative;
+	border-radius: remy(20);
+	background: $white;
+	width: 100%;
+	max-width: remy(1000);
+	padding:remy(24);
+    border-radius: 1rem;
+	.icon-close {
+		position: absolute;
+		top: remy(24);
+		right: remy(24);
+		transition: .3s;
+		z-index: 3;
+
+		&:hover {
+			opacity: .5;
+		}
+	}
+	@media (max-width: remy(1199)) {
+		border-radius: remy(12);
+		padding: remy(16);
+		.icon-close{
+			top: remy(10);
+			right:remy(10);
+		}
+	}
+		@media (max-width: remy(767)) {border-radius: remy(8);}
+}
+.icon-close {
+	height: remy(24);
+	width: remy(24);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M18 6L6 18' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M6 6L18 18' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+	cursor: pointer;
+}
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+.modal-frame.modal-frame--small{
+	width: auto;
+	min-width: remy(370);
+	height: auto;
+	@media(max-width:remy(399)){
+		min-width: 100%;
+		padding: remy(16);
+	}
+	
+}
+.modal-header__flex{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: remy(27);
+	&>*{margin-bottom: 0!important;}
+	.icon-close{
+		position: relative;
+		right: auto!important; top: auto!important;
+		background-size: remy(28);
+	}
+
+}

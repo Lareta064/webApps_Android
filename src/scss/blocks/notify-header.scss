@@ -14,7 +14,8 @@
 		}
 	}
 }
-.label-num{
+
+.label-num {
 	position: absolute;
 	font-size: remy(11);
 	letter-spacing: remy(0.012);
@@ -32,24 +33,4 @@
 	justify-content: center;
 	align-items: center;
 
-}
-/******monitoring*********/
-.header{
-	background-color: $bgColor;
-	text-align: center;
-	padding-block: remy(12);
-}
-.header-sticky{
-	position: sticky;
-	top:0;
-	z-index: 5;
-}
-.header-content{position: relative;}
-
-.header-content__abs{
-	position: absolute;
-	right: 0;
-	top:-3px;
-	
-	z-index: 10;
 }

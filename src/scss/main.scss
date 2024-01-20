@@ -4,8 +4,15 @@
 @import "base/icons";
 @import "base/buttons";
 
+@import "blocks/notify-header";
 @import "blocks/nav-menu";
 @import "blocks/tabs";
+@import "blocks/modal";
+@import "blocks/sort-block";
+@import "blocks/sort-modal";
+@import "blocks/task-card";
 //sections
 
  @import "sections/header";
+
+ @import "pages/monitoring";

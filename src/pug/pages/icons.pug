@@ -3,7 +3,11 @@ extends ../layouts/layout.pug
 block content
 	.container
 		a(href="main.html") Главная
-
+		a(href="notifications.html").btn-notify
+			span.label-num 3
+			svg.svg-notify
+				use(href="./img/spriteSvg.svg#svg-notify")
+		+task-card
 		ul
 			a(href="").link-right Подробнее
 			pre.
@@ -102,11 +106,46 @@ block content
 						.tabs-body(tab-body="3")
 							h1.h1 Content 3
 			li
-				button.search-icon
-			li
-				button.btn-sort
-					span.icon-sort
-					span Сортировать
+				.sort-block
+					button.btn-sort#sort-btnt(frame-btn="sort-tasks")
+						span.icon-sort
+						span Сортировать
+					.sort-block__out
+	
+	.modal-frame-wrapper.sort-modal(frame-modal="sort-tasks")
+		.modal-frame
+			
+			.modal-frame__body
+				p.title-20 Сортировать по
+				//============ Список сортировки ==========
+				ul.base-list#sort-cat
+					li 
+						a(href="#!").sort-list-cat.active
+							span Дате:
+							span.cat-type сначала новые
+					li 
+						a(href="#!").sort-list-cat
+							span Дате:
+							span.cat-type  сначала старые
+					li 
+						a(href="#!").sort-list-cat
+							span Регион:
+							span.cat-type сначала ближе
+					li 
+						a(href="#!").sort-list-cat
+							span Регион:
+							span.cat-type сначала дальше
 
+					li 
+						a(href="#!").sort-list-cat
+							span Дедлайн
+							span.cat-type ближе
+					li 
+						a(href="#!").sort-list-cat
+							span Дедлайн
+							span.cat-type дальше
+				
+				//============ Отмена ==========
+				button.sort-modal-close(frame-close) Отмена
 block variables
 	-var title = "Page";
