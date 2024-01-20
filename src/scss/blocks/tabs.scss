@@ -1,0 +1,70 @@
+@import "../base/var.scss";
+
+/*=========TABS=========*/
+
+.tabs {
+	position: relative;
+}
+
+.tabs-menu {
+	width: fit-content;
+	z-index: 3;
+
+	@media (max-width: remy(767)) {
+		overflow: hidden;
+		overflow-x: auto;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
+
+.tabs-menu nav {
+	display: flex;
+	column-gap: 4px;
+
+
+}
+
+.tabs-menu__item {
+	position: relative;
+
+	text-align: center;
+	min-width: remy(142);
+	font-weight: 500;
+	padding-top: remy(10);
+	padding-bottom: remy(10);
+	color: $txtGrey;
+	border-bottom: 1.5px solid $txtGrey;
+	cursor: pointer;
+	transition: .3s;
+
+	&.active {
+		color: $text;
+		border-bottom: 1.5px solid $accent;
+	}
+
+	@media (max-width: remy(991)) {
+		min-width: unset;
+		width: auto;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	@media (max-width: remy(991)) {
+
+		padding-left: remy(10);
+		padding-right: remy(10);
+	}
+
+}
+
+*[tab-body] {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}

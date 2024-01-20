@@ -9,13 +9,32 @@ svg.svg-profile{
 	transition: .3s; 
 	
 }
+[class*="svg-"]{
+	display: inline-block;
+}
 .svg-chevron{
 	width: remy(24);
 	height: remy(24);
 	color: $accent;
 }
 .svg-exit{
-	width: remy(19);
-	height: remy(19);
+
 	color: $red;
 }
+/******************************/
+.svg-search, .svg-sort, .svg-exit {
+	width: remy(19);
+	height: remy(19);
+	fill: transparent;
+	color: $accent;
+}
+.svg-notify{
+	width: remy(29);
+	height: remy(29);
+	fill: transparent;
+	color: $accent;
+}
+.svg-exit {color: $red;}
+.svg-search {color: $svgSearch;}
+	
+

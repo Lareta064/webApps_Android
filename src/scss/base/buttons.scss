@@ -1,0 +1,24 @@
+.btn {
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0 remy(10);
+	height: remy(48);
+    line-height: remy(48);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: remy(12);
+	border-radius: remy(48);
+	width: 100%;
+	transition: .3s;
+	white-space: nowrap;
+	color: white;
+	background-color: $accent;
+	svg {
+		color: inherit;
+	}
+	&:hover{
+		background-color: lighten($accent, 10%);
+	}
+
+}

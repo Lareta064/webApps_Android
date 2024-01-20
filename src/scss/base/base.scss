@@ -35,8 +35,12 @@
 @function remy($pxsize) {
 	@return calc(($pxsize/16))+rem;
 }
+
 *, *:after, *:before {
 	box-sizing: border-box;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
   }
   
   html {
@@ -77,17 +81,23 @@
   h2,
   h3,
   h4,
-  p {
+  p , a, span, button, input{
 	padding: 0;
 	margin: 0;
+	letter-spacing: 0.001em;
   }
   
   img {
 	max-width: 100%;
 	height: auto;
 	vertical-align: middle;
+	object-fit: cover;
   }
-  
+  *{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+  }
   input,
   button, button:focus, input:focus {
 	outline: none;
@@ -98,7 +108,13 @@
 	background-color: transparent;
 	border: none;
 	box-shadow: none;
+	font-family: inherit;
+	font-size: inherit;
 	cursor: pointer;
+  }
+  input{
+	font-family: inherit;
+	font-size: inherit;
   }
 input[type="submit"]{
 	padding: 0;
