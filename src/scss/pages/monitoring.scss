@@ -1,7 +1,12 @@
 .monitoring-main{
 	padding: remy(8) 0;
 	background-color: $bgColor;
-	
+	.tabs-menu{
+		position: sticky;
+		top:remy(56);
+		background-color: $bgColor;
+		z-index: 4;
+	}
 }
 .monitoring-tabs>*+* {
 	margin-top: remy(20)

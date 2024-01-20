@@ -22,6 +22,59 @@ mixin task-card
 			
 		.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
 		.tc__footer
+			a(href="#!").link-right Подать заявку
+			a(href="#!" ).btn Подробнее
+
+mixin task-card-pending
+	.task-card.pending-task
+		.tc__header Название задачи, которе может переноситья на следующую строку, а потом и на ещё 1
+		
+		.tc__body
+			.tc__state Статус: #[span в процессе]
+
+			.tc__price Потенциальная оплата: #[span 20 000] ₽ 
+			
+			.tc__date
+				.tc__cell Дата начало: #[span 08.10.23] в 
+				.tc__cell Дата окончания: #[span 18.10.23] в #[span 19:00]
+
+			.tc__time
+				.time-start Время начала труд. дня: #[span  9:00] 
+				.time-finish Время окончания  труд. дня: #[span 19:00]
+			
+			.tc__contractor Кол-во людей: #[span 6]
+			
+			.tc__requir Требования к форме: требуется, выдадут на месте
+			.tc__location МО, г. Москва, Тверской рай-н Тверская, 1
+			
+		.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
+		.tc__footer
 			a(href="#!").link-right Подробнее
 			a(href="#!" ).btn Подать заявку
+
+mixin task-card-completed
+	.task-card.completed-task
+		.tc__header Название задачи, которе может переноситья на следующую строку, а потом и на ещё 1
+		
+		.tc__body
+			.tc__state Статус: #[span в процессе]
+
+			.tc__price Потенциальная оплата: #[span 20 000] ₽ 
+			
+			.tc__date
+				.tc__cell Дата начало: #[span 08.10.23] в 
+				.tc__cell Дата окончания: #[span 18.10.23] в #[span 19:00]
+
+			.tc__time
+				.time-start Время начала труд. дня: #[span  9:00] 
+				.time-finish Время окончания  труд. дня: #[span 19:00]
+			
+			.tc__contractor Кол-во людей: #[span 6]
+			
+			.tc__requir Требования к форме: требуется, выдадут на месте
+			.tc__location МО, г. Москва, Тверской рай-н Тверская, 1
+			
+		.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
+		.tc__footer
+			a(href="#!").link-right Подробнее
 			
