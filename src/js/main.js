@@ -19,7 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
 				this.classList.add('active');
 				const sortCat = sortItem.querySelector('.cat-type').textContent;
 				sortOut.textContent = sortCat;
-				setTimeout(()=>this.closest('.modal-frame-wrapper').classList.remove('visible'), 300);
+				setTimeout(function(){
+					sortItem.closest('.modal-frame-wrapper').classList.remove('visible');
+					bodyEl.classList.remove('lock');
+				}, 300);
 			});
 			/***********отмена сортировки************** */
 			cleanSort.addEventListener('click', () => {
@@ -135,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 			if (removeClassBtn) {
 				removeClassBtn.addEventListener('click', () => {
-					console.log('555');
+					
 					item.classList.toggle('open');
 				});
 			}

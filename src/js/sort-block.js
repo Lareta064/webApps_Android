@@ -13,11 +13,14 @@ if (sortList) {
 			e.preventDefault();
 			const sortCatActive = sortList.querySelector('.sort-list-cat.active');
 			if (sortCatActive) sortCatActive.classList.remove('active');
-			
+
 			this.classList.add('active');
 			const sortCat = sortItem.querySelector('.cat-type').textContent;
 			sortOut.textContent = sortCat;
-			setTimeout(() => this.closest('.modal-frame-wrapper').classList.remove('visible'), 300);
+			setTimeout(function () {
+				sortItem.closest('.modal-frame-wrapper').classList.remove('visible');
+				bodyEl.classList.remove('lock');
+			}, 300);
 		});
 		/***********отмена сортировки************** */
 		cleanSort.addEventListener('click', () => {
