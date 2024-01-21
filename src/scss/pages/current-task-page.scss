@@ -39,3 +39,12 @@
 		transform: translateY(0);
 	}
 }
+.fix-header.fix-header--visit{
+	border-radius: 0px 0px 1rem 1rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+	background: rgba(255, 255, 255, 0.50);
+	backdrop-filter: blur(12.5px);
+	.btn-back{
+		transform: rotate(180deg);
+	}
+}

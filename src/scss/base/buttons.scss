@@ -32,7 +32,7 @@
 .btn-cancel{
 	color: $red;
 }
-.btn-round{
+.btn-round, .btn-round-white{
 	width: remy(38);
 	height: remy(38);
 	border-radius: 50%;
@@ -40,8 +40,18 @@
 	background-color: $accent;
 	background-size: remy(24);
 	transition: .3s; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	&:hover{
 		background-color: lighten($accent, 10%);
+	}
+}
+.btn-round-white{
+  background-color: white;
+	&:hover {
+		cursor:default;
+		background-color: white;
 	}
 }
 .btn-back{

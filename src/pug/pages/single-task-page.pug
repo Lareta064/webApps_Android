@@ -73,7 +73,8 @@ block content
 
 	.single-task-location.toggle-class(frame-modal="location")
 		.custom-container.flex-column
-			button.btn-back.btn-round(frame-close)
+			.fix-header
+				button.btn-back.btn-round(frame-close)
 			//========= map ==========
 			.single-task-map
 				img(src="./img/map.webp", alt="map")

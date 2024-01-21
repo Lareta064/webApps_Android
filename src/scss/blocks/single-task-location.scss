@@ -8,17 +8,26 @@
 	z-index: 5;
 	overflow: hidden;
 	
-	.btn-back{
-		position: absolute;
-		top: remy(16);
-		left: remy(16);
-		z-index: 3;
-	}
 }
 .custom-container {
 	position: relative;
 	margin: 0 auto;
 	max-width: remy(375);
+	.fix-header{
+		padding-inline:1rem ;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: remy(48);
+		z-index: 2;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: remy(12);
+		*{flex-shrink: 0;}
+		p{flex-shrink: 1; flex-grow:1;}
+		
+	}
 }
 
 .single-task-map {

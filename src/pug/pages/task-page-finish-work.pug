@@ -1,0 +1,80 @@
+extends ../layouts/layout.pug
+
+block content
+	header.header.header-sticky
+		.container
+			.header-content
+				.header-content__abs
+					a(href="notifications.html").btn-notify
+						span.label-num 3
+						svg.svg-notify
+							use(href="./img/spriteSvg.svg#svg-notify")
+
+	main.stage-work
+		.container
+			.stage-work__content
+				h1.h1 Выполнение задачи
+				
+				.simple-card
+					p До конца рабочего дня:
+					p.txt-accent.title-20 0 ч. 0 мин. 0 сек.
+						
+			
+				//========= карточка с описанием ==========
+				.current-task-card.toggle-class.open
+					.tc__header Название задачи, которе может переноситья на следующую строку, а потом и на ещё 1
+					
+					.hide-details__close.toggle-class-remove
+						p Свернуть подробности
+						svg.svg-chevron
+							use(href="./img/spriteSvg.svg#svg-chevron")
+							
+						//========== скрытый блок ==========
+					.hide-details.tc__body
+						//=========== task description =========
+						.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
+						
+						.tc__price Потенциальная оплата: #[span 20 000] ₽ 
+					
+						.tc__date
+							.tc__cell Дата начало: #[span 08.10.23] в 
+							.tc__cell Дата окончания: #[span 18.10.23] в #[span 19:00]
+
+						.tc__time
+							.time-start Время начала труд. дня: #[span  9:00] 
+							.time-finish Время окончания  труд. дня: #[span 19:00]
+						
+						.tc__contractor Кол-во людей: #[span 6]
+						
+						.tc__requir Требования к форме: требуется, выдадут на месте
+						.tc__location МО, г. Москва, Тверской рай-н Тверская, 1
+						
+					
+				.stage-work__btn
+					a(href="").btn Завершил(а) выполнение
+	//============= FOOTER =============
+	footer.nav-menu-panel
+		nav.nav-menu
+			a(href="monitoring.html")
+				svg.svg-monitoring
+					use(href="./img/spriteSvg.svg#svg-monitoring")
+				span Мониторинг
+			
+			a.active(href="current-task-page.html")
+				svg.svg-task
+					use(href="./img/spriteSvg.svg#svg-task")
+				span Текущ задача
+			
+			a(href="rating-page.html")
+				svg.svg-rating
+					use(href="./img/spriteSvg.svg#svg-rating")
+				span Рейтинг
+			
+			a(href="profile-page.html")
+				svg.svg-profile
+					use(href="./img/spriteSvg.svg#svg-profile")
+				span Профиль
+
+
+block variables
+	-var title = "Задача. Завершить";
