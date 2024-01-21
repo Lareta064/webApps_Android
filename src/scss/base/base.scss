@@ -143,7 +143,13 @@ main{
 	padding-inline: remy(16);
 	margin: 0 auto;
 }
+.pos-rel{position: relative;}
+.flex-column{
+	display: flex;
+	flex-direction: column;
+	&>*{width: 100%;}
 
+}
 .base-list{
 	a {
 		display: flex;
@@ -154,4 +160,9 @@ main{
 		color: $text;
 	}
 	a.active{color: $accent;}
+}
+.box-shadow{
+	border-radius: 1rem 1rem 0 0;
+	background-color: $bgColor;
+	box-shadow: $bsh;
 }

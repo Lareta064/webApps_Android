@@ -34,7 +34,7 @@ block content
 					.tc__requir Требования к форме: требуется, выдадут на месте
 					.tc__location МО, г. Москва, Тверской рай-н Тверская, 1
 					
-					a(href="#!").link-right Показать на карте
+					a(href="#!" frame-btn="location").link-right Показать на карте
 				
 				.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
 				
@@ -72,12 +72,45 @@ block content
 
 	//========== вкладка На карте =========
 
-	.single-task-location
-		button.btn-back.btn-round
-		
-		.single-task-map
-			img(src="./img/map.webp", alt="map")
-		.single-task-details
+	.single-task-location.toggle-class(frame-modal="location")
+		.custom-container.flex-column
+			button.btn-back.btn-round(frame-close)
+			//========= map ==========
+			.single-task-map
+				img(src="./img/map.webp", alt="map")
+			
+			//========= карточка с описанием ==========
+			.single-task-details.box-shadow
+				//==========видимая часть ==========
+				.visible-details
+					.hide-details__open.toggle-class-add
+					
+					.tc__header Название задачи, которе может переноситья на следующую строку, а потом и на ещё 1
+					
+					.tc__location МО, г. Москва, Тверской рай-н Тверская, 1
 
+				//========== скрытый блок ==========
+				.hide-details.tc__body
+					.hide-details__close.toggle-class-remove
+						p Свернуть подробности
+						svg.svg-chevron
+							use(href="./img/spriteSvg.svg#svg-chevron")
+						
+					//=========== task description =========
+					.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
+					
+					.tc__price Потенциальная оплата: #[span 20 000] ₽ 
+				
+					.tc__date
+						.tc__cell Дата начало: #[span 08.10.23] в 
+						.tc__cell Дата окончания: #[span 18.10.23] в #[span 19:00]
+
+					.tc__time
+						.time-start Время начала труд. дня: #[span  9:00] 
+						.time-finish Время окончания  труд. дня: #[span 19:00]
+					
+					.tc__contractor Кол-во людей: #[span 6]
+					
+					.tc__requir Требования к форме: требуется, выдадут на месте
 block variables
 	-var title = "Задача. Подробнее";

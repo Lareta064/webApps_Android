@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const bodyEl = document.querySelector('body');
-
+	
 	const sortOut = document.querySelector('.sort-block__out');
 	const sortList = document.querySelector('#sort-cat');
 	
@@ -23,44 +23,48 @@ document.addEventListener("DOMContentLoaded", function () {
 	//====== each group and toggle active class ========
 	const tabs = document.querySelectorAll('.tabs');
 	// На нет и скрипта нет
-	if(tabs.length < 1) return;
-	// Раз дошёл сюда, значит табс не пустой
-	for (let tab of tabs)
-	{
-		// Ищем кнопки и контейнеры
-		const tabBtns = tab.querySelectorAll('[tab-btn]');
-		const tabContainers = tab.querySelectorAll('[tab-body]');
-
-		// Если количество кнопок и контейнеров разное или если их нет
-		if(
-			tabBtns.length !== tabContainers.length 
-			|| tabBtns.length === 0
-		) return;
-
-		// Добавляем листенеры
-		for(btn of tabBtns)
+	if(tabs.length > 0) {
+		// Раз дошёл сюда, значит табс не пустой
+		
+		for (let tab of tabs)
 		{
-			const clickedBtn = btn;
-			btn.addEventListener('click', (e) => {
-				e.stopPropagation();
-				const btnData = clickedBtn.getAttribute('tab-btn');
+			// Ищем кнопки и контейнеры
+			const tabBtns = tab.querySelectorAll('[tab-btn]');
+			const tabContainers = tab.querySelectorAll('[tab-body]');
 
-				const activeBtn = Array.from(tabBtns).find(btn => btn.classList.contains('active'));
-				const activeCont = Array.from(tabContainers).find(cont => cont.classList.contains('active'));
-				activeBtn.classList.remove('active');
-				activeCont.classList.remove('active');
-				
-				const relatedCont = Array.from(tabContainers).find(cont => cont.getAttribute('tab-body') === btnData);
-				clickedBtn.classList.add('active');
-				relatedCont.classList.add('active');
-			})
+			// Если количество кнопок и контейнеров разное или если их нет
+			if(
+				tabBtns.length !== tabContainers.length 
+				|| tabBtns.length === 0
+			) return;
+
+			// Добавляем листенеры
+			for(btn of tabBtns)
+			{
+				const clickedBtn = btn;
+				btn.addEventListener('click', (e) => {
+					e.stopPropagation();
+					const btnData = clickedBtn.getAttribute('tab-btn');
+
+					const activeBtn = Array.from(tabBtns).find(btn => btn.classList.contains('active'));
+					const activeCont = Array.from(tabContainers).find(cont => cont.classList.contains('active'));
+					activeBtn.classList.remove('active');
+					activeCont.classList.remove('active');
+					
+					const relatedCont = Array.from(tabContainers).find(cont => cont.getAttribute('tab-body') === btnData);
+					clickedBtn.classList.add('active');
+					relatedCont.classList.add('active');
+				})
+			}
 		}
 	}
-
+	
 	/* =============== modal с атрибутом frame-modal ===============*/
 	const modalFramesOpen = document.querySelectorAll('[frame-btn]');
 	const modalFrames = document.querySelectorAll('[frame-modal]');
+	console.log('222');
 	if (modalFrames.length > 0) {
+		console.log('123');
 		const modalFramesClose = document.querySelectorAll('[frame-close]');
 
 		for (let item of modalFramesOpen) {
@@ -103,6 +107,21 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		}
 	}
+    
+	/**************показать описание задачи на карте*************** */
+	const toggleClass = document.querySelectorAll('.toggle-class');
+	if (toggleClass.length > 0){
+		for (let item of toggleClass){
+			const addClassBtn = item.querySelector('.toggle-class-add');
+			const removeClassBtn = item.querySelector('.toggle-class-remove');
+			addClassBtn.addEventListener('click',()=>{
+				item.classList.toggle('open')
+			});
+			removeClassBtn.addEventListener('click', () => {
+				item.classList.remove('open');
+			});
 
+		}
+	}
 });
 

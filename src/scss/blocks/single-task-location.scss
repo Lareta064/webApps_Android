@@ -1,20 +1,110 @@
 @import "../base/var.scss";
 .single-task-location{
-	position: absolute;
+	position:fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
+	height: calc(100vh - remy(90));
 	z-index: 5;
+	overflow: hidden;
+	
 	.btn-back{
 		position: absolute;
 		top: remy(16);
 		left: remy(16);
 		z-index: 3;
 	}
-	.single-task-details{
-		position: absolute;
-		bottom:remy(90) ;
-		background-color: #fff;
+}
+.custom-container {
+	position: relative;
+	margin: 0 auto;
+	max-width: remy(375);
+}
+
+.single-task-map {
+
+	background-size: cover;
+	height: calc(100vh - remy(90));
+
+}
+.single-task-details {
+	position: absolute;
+	padding: remy(24) remy(16) remy(20);
+	transition: .3s; 
+	bottom: 0;
+	z-index: 2;
+	transform: translateY(calc(100vh - remy(380)));
+	&>*+* {
+		margin-top: 1rem;
 	}
+}
+.visible-details{
+	min-height: 7.5rem;
+	height: 7.5rem;
+	
+	&>*+* {
+			margin-top: 1rem;
+		}
+}
+.hide-details{
+	max-height: calc(100vh - 350px);
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-width: none;
+	&::-webkit-scrollbar{display: none;}
+}
+.hide-details__open{
+	position: absolute;
+	height: remy(24);
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.hide-details__open:before{
+	content: '';
+	position: absolute;
+	height: remy(5);
+	width: remy(60);
+	border-radius: remy(10);
+	top: remy(8);
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: $greyBorder;
+}
+.hide-details__close{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $txtGrey;
+	position: relative;
+	&:after{
+		content: '';
+		height: 1px;
+		background-color: $txtGrey;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top:50%;
+		transform: translateY(-50%);
+	}
+	p{padding-inline: remy(4); 
+		background-color: #fff;
+		position: relative;
+		z-index: 2;
+
+	}
+	svg{
+		color: inherit;
+		transform: rotate(-90deg);
+		background-color: #fff;
+		position: relative;
+		top:remy(-5);
+		z-index: 2;
+	}
+	
+}
+.toggle-class.open .single-task-details{
+	transform: translateY(0);
 }
