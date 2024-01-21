@@ -7,6 +7,7 @@
 .sort-block__out{
 	position: relative;
 	padding-left: remy(12);
+	padding-right: 1rem;
 	
 	&:not(:empty):before{
 		content: '';

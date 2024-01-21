@@ -6,17 +6,30 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	if (sortList){
 		const sortListItems = sortList.querySelectorAll('.sort-list-cat');
-
+		const cleanSort = document.querySelector('#cancel-sort');
+		
 		for (let sortItem of sortListItems){
-			const sortCatActive = sortList.querySelector('.active');
+			
 			sortItem.addEventListener('click', function(e){
+
 				e.preventDefault();
-				if (sortCatActive) sortCatActive.classList.remove('active');
+				const sortCatActive = sortList.querySelector('.sort-list-cat.active');
+				if (sortCatActive ) sortCatActive.classList.remove('active');
 				
 				this.classList.add('active');
 				const sortCat = sortItem.querySelector('.cat-type').textContent;
 				sortOut.textContent = sortCat;
-				setTimeout(()=>this.closest('.modal-frame-wrapper').classList.remove('visible'), 500);
+				setTimeout(()=>this.closest('.modal-frame-wrapper').classList.remove('visible'), 300);
+			});
+			/***********отмена сортировки************** */
+			cleanSort.addEventListener('click', () => {
+				const sortCatActive = sortList.querySelector('.sort-list-cat.active');
+				sortOut.textContent = '';
+				if (sortCatActive) {
+					sortCatActive.classList.remove('active');
+				}
+				
+				
 			});
 		}
 	}
@@ -62,9 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	/* =============== modal с атрибутом frame-modal ===============*/
 	const modalFramesOpen = document.querySelectorAll('[frame-btn]');
 	const modalFrames = document.querySelectorAll('[frame-modal]');
-	console.log('222');
+	
 	if (modalFrames.length > 0) {
-		console.log('123');
+		
 		const modalFramesClose = document.querySelectorAll('[frame-close]');
 
 		for (let item of modalFramesOpen) {

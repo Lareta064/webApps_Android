@@ -33,7 +33,7 @@
 	transition: .3s; 
 	bottom: 0;
 	z-index: 2;
-	transform: translateY(calc(100vh - remy(380)));
+	transform: translateY(calc(100% - remy(180)));
 	&>*+* {
 		margin-top: 1rem;
 	}

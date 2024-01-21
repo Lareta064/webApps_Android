@@ -79,7 +79,7 @@ block content
 				//============ Список сортировки ==========
 				ul.base-list#sort-cat
 					li 
-						a(href="#!").sort-list-cat.active
+						a(href="#!").sort-list-cat
 							span Дате:
 							span.cat-type сначала новые
 					li 
@@ -105,6 +105,6 @@ block content
 							span.cat-type дальше
 				
 				//============ Отмена ==========
-				button.sort-modal-close(frame-close) Отмена
+				button.sort-modal-close#cancel-sort(frame-close) Отмена
 block variables
 	-var title = "Мониторинг";
