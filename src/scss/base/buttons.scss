@@ -1,5 +1,5 @@
 @import "var.scss";
-.btn,.btn-outline {
+.btn,.btn-outline, .btn-grey {
 	font-size: 1rem;
 	font-weight: 600;
 	padding: 0 remy(10);
@@ -28,6 +28,11 @@
 	background-color: transparent;
 	color: $accent;
 	&:hover{background-color:darken($bodyBg, 10%)}
+}
+.btn-grey{
+	border-color:#EFEFEF;
+	background-color: #EFEFEF;
+	color: rgba(54,54,54, .5);
 }
 .btn-cancel{
 	color: $red;
