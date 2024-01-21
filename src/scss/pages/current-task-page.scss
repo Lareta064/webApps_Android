@@ -1,0 +1,41 @@
+@import "../base/var.scss";
+.current-task-page__content>*+*{
+	margin-top: 20px;
+}
+.current-task-card{
+	padding: 0;
+	border-radius: 0;
+	background-color: transparent;
+	&>*+*{margin-top: remy(20);}
+	
+	.hide-details__close{
+		height: remy(24);
+		svg{background-color: $bodyBg;}
+		p{background-color: $bodyBg}
+	}
+}
+.current-task-card.toggle-class{
+	.hide-details{display: none;}
+	.hide-details__close svg{transform: rotate(90deg);}
+	&.open{
+		.hide-details {
+			display: block;
+		}
+		.hide-details__close svg {
+			transform: rotate(-90deg);
+		}
+	} 
+}
+
+.single-task-location.single-task--current{
+	.single-task-details{
+		transform: translateY(calc(100% - 16.25rem));
+	}
+	.hide-details{max-height: calc(100vh - 550px);}
+	.simple-card{margin-top: remy(28);}
+}
+.single-task-location.single-task--current.open {
+	.single-task-details {
+		transform: translateY(0);
+	}
+}

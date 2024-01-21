@@ -4,4 +4,5 @@
 	padding: 1rem;
 	background-color: #fff;
 	box-shadow: $bsh;
+	&>*+*{margin-top: remy(10);}
 }

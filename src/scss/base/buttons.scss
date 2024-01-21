@@ -1,10 +1,11 @@
 @import "var.scss";
-.btn {
+.btn,.btn-outline {
 	font-size: 1rem;
 	font-weight: 600;
 	padding: 0 remy(10);
 	height: remy(48);
-    line-height: remy(48);
+    line-height: remy(44);
+	border: remy(2) solid $accent;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,6 +23,11 @@
 		background-color: lighten($accent, 10%);
 	}
 
+}
+.btn-outline{
+	background-color: transparent;
+	color: $accent;
+	&:hover{background-color:darken($bodyBg, 10%)}
 }
 .btn-cancel{
 	color: $red;

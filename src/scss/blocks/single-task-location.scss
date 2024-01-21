@@ -4,7 +4,7 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	height: calc(100vh - remy(90));
+	height: calc(100vh - 5rem);
 	z-index: 5;
 	overflow: hidden;
 	
@@ -39,8 +39,6 @@
 	}
 }
 .visible-details{
-	min-height: 7.5rem;
-	height: 7.5rem;
 	
 	&>*+* {
 			margin-top: 1rem;
@@ -79,9 +77,10 @@
 	justify-content: center;
 	color: $txtGrey;
 	position: relative;
+	
 	&:after{
 		content: '';
-		height: 1px;
+		height: .5px;
 		background-color: $txtGrey;
 		position: absolute;
 		left: 0;
@@ -100,8 +99,12 @@
 		transform: rotate(-90deg);
 		background-color: #fff;
 		position: relative;
-		top:remy(-5);
+		width: remy(24);
+		height: remy(24);
+		object-fit: contain;
 		z-index: 2;
+		
+		margin-top: 0;
 	}
 	
 }
