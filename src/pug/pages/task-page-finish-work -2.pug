@@ -16,12 +16,12 @@ block content
 				h1.h1 Выполнение задачи
 				
 				.simple-card
-					p До конца рабочего дня:
-					p.txt-accent.title-20 0 ч. 0 мин. 0 сек.
+					span.check-icon
+					p.txt-accent.title-20 На сегодня работа выполнена
 						
 			
 				//========= карточка с описанием ==========
-				.current-task-card.toggle-class
+				.current-task-card.toggle-class.open
 					.tc__header Название задачи, которе может переноситья на следующую строку, а потом и на ещё 1
 					
 					.hide-details__close.toggle-class-remove
@@ -52,9 +52,9 @@ block content
 					
 				.stage-work__btn
 					a(href="").btn
-						span Завершил(а) выполнение
+						span Получил(а) оплату
 						svg.svg-check
-								use(href=",.img/spriteSvg.svg#svg-check")
+							use(href=",.img/spriteSvg.svg#svg-check")
 	
 	//============= FOOTER =============
 	footer.nav-menu-panel

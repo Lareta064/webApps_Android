@@ -36,6 +36,10 @@ svg.svg-profile{
 }
 .svg-exit {color: $red;}
 .svg-search {color: $svgSearch;}
+.svg-check{
+	width: remy(20);
+	height: remy(20);
+}
 [class*="-icon"] {
 	display: inline-flex;
 	flex-shrink: 0;
@@ -55,6 +59,12 @@ svg.svg-profile{
 .clock-icon{
 	width: remy(24);
 	height: remy(24);
-	flex-shrink: 0;
+	
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3ccircle cx='12' cy='13' r='9' stroke='%23333333' stroke-width='1.5'/%3e%3cpath d='M12 9V13L14.5 15.5' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M3.5 4.5L7.50002 2' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M20.5 4.5L16.5 2' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+}
+.check-icon{
+	width: remy(24);
+	height: remy(24);
+	
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3ccircle cx='12' cy='12' r='10' stroke='%23007AFF' stroke-width='1.5'/%3e%3cpath d='M8.5 12.5L10.5 14.5L15.5 9.5' stroke='%23007AFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
 }
