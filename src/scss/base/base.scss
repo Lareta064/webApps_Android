@@ -116,6 +116,7 @@
   input{
 	font-family: inherit;
 	font-size: inherit;
+	border: none;
   }
 input[type="submit"]{
 	padding: 0;
@@ -149,6 +150,11 @@ main{
 	flex-direction: column;
 	&>*{width: 100%;}
 
+}
+.flex-between{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .base-list{
 	a {

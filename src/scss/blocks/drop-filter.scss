@@ -1,0 +1,113 @@
+@import "../base/var.scss";
+.drop-filter {
+	
+	z-index: 3;
+	position: relative;
+
+	&__input {
+		position: relative;
+		input {
+			border-radius: 0;
+			width: 100%;
+			display: block;
+			height: remy(35);
+			padding-left: remy(14);
+			padding-right: remy(30);;
+			border-radius: remy(8);
+			background: white;
+			letter-spacing: 0.01em;
+			border: 1px solid $greyBorder;
+			font-size: 16px;
+		}
+	}
+
+	&__list {
+		position: absolute;
+		overflow: hidden;
+		left: 0;
+		top: 100%;
+		right: 0;
+		background-color: white;
+		// box-shadow: 0px 0px remy(8) remy(4) $boxSh;
+		border-radius: 0 0 remy(8) remy(8);
+		border: 1px solid $greyBorder;
+		border-top: none;
+		display: none;
+
+		ul {
+			max-height: remy(130);
+			overflow: hidden;
+			overflow-y: auto;
+			scrollbar-width: thin;
+			scrollbar-color: $greyBorder $accent;			
+			scrollbar-gutter: stable;
+			margin-top: remy(8);
+			margin-bottom: remy(8);
+
+			&::-webkit-scrollbar {
+				display: block;
+				border-radius: remy(4);
+				width: remy(4);
+				height: remy(20);
+			}
+
+			&::-webkit-scrollbar-track {
+				background-color: $greyBorder;
+				border-radius: remy(10);
+
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: $accent;
+				border-radius: remy(6);
+
+			}
+		}
+	}
+
+	&__item {
+		
+		 a {
+			display: block;
+			height: remy(35);
+			font-size: 16px;
+			color: $text;
+			line-height: remy(35);
+			padding-inline: remy(14);
+		}
+
+		cursor:pointer;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $greyBorder;
+		}
+
+		&:hover {
+			background-color: #f5f5f5;
+		}
+	}
+
+}
+.drop-filter.active {
+	.drop-filter__list {
+		display: block;
+	}
+
+	.drop-filter__input {
+		border-radius: remy(8) remy(8) 0 0;
+	}
+}
+
+.drop-filter__input:after {
+	content: '';
+	display: block;
+	width: remy(19);
+	height: remy(19);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19' fill='none'%3e%3cpath d='M15.0417 7.125L9.50001 11.875L3.95834 7.125' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: remy(8);
+	z-index: 2;
+
+}

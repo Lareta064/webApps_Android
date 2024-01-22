@@ -99,3 +99,18 @@ mixin circle-progress-big(percent=44)
 		svg.donut-svg(width='200' height='200')
 			circle.donut-ring(cx="100" cy="100" r="84"  fill='transparent' stroke='#EAEAEA' stroke-width='16')
 			circle.donut-segment(cx="100" cy="100" r="84"  fill='transparent' stroke='#007AFF' stroke-width='16' stroke-dasharray='0 251')
+
+mixin custom-drop(inputVal, items)
+	.drop-filter&attributes(attributes)
+		.custom-drop
+			.custom-drop__val
+				input(type="text" value=""+ inputVal readonly)
+				//====icon chevron =====
+				.custom-drop__icon
+			
+			if 	items !==''
+				.custom-drop__list
+					ul
+						each item of items
+							li.custom-drop__item
+								a(href="#!") #{item}

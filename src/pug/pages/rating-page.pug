@@ -14,7 +14,44 @@ block content
 	main.rating-main
 		.container
 			.rating-main__content
-			+circle-progress-big(89)
+				.rating-progress
+					+circle-progress-big(89)
+				.rating-value
+					p Рейтинг
+					span 8.9/10
+	
+				//====== diagram card ==========
+				.diagram-card
+					.flex-between
+						.title-20 Статистика
+						
+						//======== DROP-FILTER =======
+						.drop-filter.drop-filter-period
+							.drop-filter__input
+								input(type="text" readonly value="Весь период")
+							
+							.drop-filter__list
+								ul
+									li.drop-filter__item
+										a(href="#!") Весь период
+
+									li.drop-filter__item
+										a(href="#!") Год
+									li.drop-filter__item
+										a(href="#!") Полугодие
+									li.drop-filter__item
+										a(href="#!") Квартал
+									li.drop-filter__item
+										a(href="#!") Месяц
+									li.drop-filter__item
+										a(href="#!") Неделя
+					
+					.diagram-card__chart
+						.chart-label
+							p 10034 заказов выполнено
+							span 02 окт. - 2 ноя.
+
+						img(src="./img/chart.webp", alt="alt")
 	
 	//============= FOOTER =============
 	footer.nav-menu-panel
