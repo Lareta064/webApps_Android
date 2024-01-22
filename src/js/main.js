@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 	/**************показать описание задачи на карте*************** */
 	const toggleClass = document.querySelectorAll('.toggle-class');
-	console.log(toggleClass);
+	
 	if (toggleClass.length > 0){
 		for (let item of toggleClass){
 			const addClassBtn = item.querySelector('.toggle-class-add');
@@ -145,4 +145,3 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 });
-
