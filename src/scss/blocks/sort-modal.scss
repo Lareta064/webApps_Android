@@ -1,8 +1,8 @@
 @import "../base/var.scss";
 .modal-frame-wrapper.sort-modal{
-	align-items: center;
+	
 	justify-content: center;
-	padding: 0;
+	padding-top: remy(30);
 	.modal-frame{
 		padding: 0;
 		text-align: center;
