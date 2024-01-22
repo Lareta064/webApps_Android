@@ -14,12 +14,16 @@
 @import "blocks/simple-card";
 //sections
 
- @import "sections/header";
+@import "sections/header";
 
- @import "pages/monitoring";
+@import "pages/monitoring";
 
- @import "pages/single-task-page";
- @import "blocks/single-task-location";
+@import "pages/single-task-page";
+@import "blocks/single-task-location";
 
- @import "pages/current-task-page";
- @import "pages/finish-work";
+@import "pages/current-task-page";
+@import "pages/finish-work";
+
+@import "blocks/circle-progress";
+@import "pages/rating-page";
+

@@ -78,4 +78,24 @@ mixin task-card-completed
 		.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
 		.tc__footer
 			a(href="#!").link-right Подробнее
-			
+
+mixin circle-progress(percent=44)
+	.loading-donut(data-progress='' + percent)
+		.loading-donut__value #{percent}%
+		svg.donut-svg(width='44' height='44')
+			circle.donut-ring(cx='22' cy='22' r='20' fill='transparent' stroke='#EAEAEA' stroke-width='4')
+			circle.donut-segment(cx='22' cy='22' r='20' fill='transparent' stroke='#007AFF' stroke-width='4' stroke-dasharray='0 251')
+
+mixin circle-progress-medium(percent=44)
+	.loading-donut.loading-donut--medium(data-progress='' + percent)
+		.loading-donut__value #{percent}%
+		svg.donut-svg(width='85' height='85')
+			circle.donut-ring(cx="42.5" cy="42.5" r="38.5"  fill='transparent' stroke='#EAEAEA' stroke-width='8')
+			circle.donut-segment(cx="42.5" cy="42.5" r="38.5"  fill='transparent' stroke='#007AFF' stroke-width='8' stroke-dasharray='0 251')
+
+mixin circle-progress-big(percent=44)
+	.loading-donut.loading-donut--big(data-progress='' + percent)
+		.loading-donut__value #{percent}%
+		svg.donut-svg(width='200' height='200')
+			circle.donut-ring(cx="100" cy="100" r="84"  fill='transparent' stroke='#EAEAEA' stroke-width='16')
+			circle.donut-segment(cx="100" cy="100" r="84"  fill='transparent' stroke='#007AFF' stroke-width='16' stroke-dasharray='0 251')

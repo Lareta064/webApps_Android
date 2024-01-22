@@ -1,0 +1,62 @@
+extends ../layouts/layout.pug
+
+block content
+	header.header.header-sticky
+		.container
+			.header-content
+				h1.h1 Производительность
+				.header-content__abs
+					a(href="notifications.html").btn-notify
+						span.label-num 3
+						svg.svg-notify
+							use(href="./img/spriteSvg.svg#svg-notify")
+
+	main.rating-main
+		.container
+			.rating-main__content
+			+circle-progress-big(89)
+	
+	//============= FOOTER =============
+	footer.nav-menu-panel
+		nav.nav-menu
+			a.active(href="monitoring.html")
+				svg.svg-monitoring
+					use(href="./img/spriteSvg.svg#svg-monitoring")
+				span Мониторинг
+			a(href="current-task-page.html")
+				svg.svg-task
+					use(href="./img/spriteSvg.svg#svg-task")
+				span Текущ задача
+			a(href="rating-page.html")
+				svg.svg-rating
+					use(href="./img/spriteSvg.svg#svg-rating")
+				span Рейтинг
+			a(href="profile-page.html")
+				svg.svg-profile
+					use(href="./img/spriteSvg.svg#svg-profile")
+				span Профиль
+	script.
+		document.addEventListener("DOMContentLoaded", function () {
+			/************круговой прогресс бар************* */
+			const donuts = document.querySelectorAll(".loading-donut");
+			if (donuts.length > 0) {
+				function updateProgress() {
+					donuts.forEach(donut => {
+						const donutSegment = donut.querySelector(".donut-segment");
+						const progressValue = +donut.getAttribute('data-progress') || 0;
+						const circumference = 2 * Math.PI * parseFloat(donutSegment.getAttribute("r"));
+
+						const progressOffset = (100 - progressValue) / 100 * circumference;
+						donutSegment.style.strokeDasharray = `${circumference} ${circumference}`;
+						donutSegment.style.strokeDashoffset = progressOffset;
+
+						donut.dataset.progress = progressValue; // Update data attribute
+					});
+				};
+				//- Invoke update progress
+				updateProgress();
+			}
+		});
+
+block variables
+	-var title = "Рейтинг";

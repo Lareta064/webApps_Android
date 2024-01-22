@@ -108,42 +108,45 @@ Swipe.prototype.run = function () {
 		this.handleTouchMove(evt);
 	}.bind(this), false);
 };
+var swiper1 = new Swipe('#swipe1');
+var swiper2 = new Swipe('#swipe2');
+var swiper3 = new Swipe('#swipe3');
 
-var swiper = new Swipe('.toggle-class-add');
-
-swiper.onUp(function (e) {
-	const toggleClass = document.querySelectorAll('.toggle-class');
-	
+const toggleClass = document.querySelectorAll('.toggle-class');
+function upHandler(){
 	if (toggleClass.length > 0) {
-		
-		for (let item of toggleClass) {
 			
-			const addClassBtn = item.querySelector('.toggle-class-add');
-			if (addClassBtn) {
-				item.classList.add('open');
+			for (let item of toggleClass) {
+				
+				const addClassBtn = item.querySelector('.toggle-class-add');
+				if (addClassBtn) {
+					item.classList.add('open');
+					
+				}
 				
 			}
-			
 		}
-	}
-	
-});
-swiper.onDown(function (e) {
-	const toggleClass = document.querySelectorAll('.toggle-class');
-	
+}
+function downHandler() {
 	if (toggleClass.length > 0) {
-		
+
 		for (let item of toggleClass) {
-			
+
 			const addClassBtn = item.querySelector('.toggle-class-add');
 			if (addClassBtn) {
 				item.classList.remove('open');
-				
+
 			}
 
 		}
 	}
-
-});
-	
-swiper.run();
+}
+swiper1.onUp(upHandler);
+swiper2.onUp(upHandler);
+swiper3.onUp(upHandler);
+swiper1.onDown(downHandler);
+swiper2.onDown(downHandler);
+swiper3.onDown(downHandler);
+swiper1.run();
+swiper2.run();
+swiper3.run();

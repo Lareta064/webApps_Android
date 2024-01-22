@@ -1,0 +1,42 @@
+@import "../base/var.scss";
+/********************************/
+.loading-donut {
+	width: remy(44);
+	height: remy(44);
+	position: relative;
+	letter-spacing: 0.014px;
+	font-size: remy(14);
+	.loading-donut__value{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		
+		color: black;
+		font-weight: 600;
+	}
+}
+.loading-donut.loading-donut--medium{
+	width: remy(85);
+	height: remy(85);
+	font-size: remy(20);
+	letter-spacing: 0.02px;
+}
+.loading-donut.loading-donut--big{
+	width: remy(200);
+	height: remy(200);
+	font-size: remy(48);
+	letter-spacing: remy(0.048);
+	
+}
+
+.donut-svg {
+	transform: rotate(-90deg);
+}
+
+.donut-ring,
+.donut-segment {
+	fill: none;
+	transition: .5s;
+	stroke-linecap: round;
+}

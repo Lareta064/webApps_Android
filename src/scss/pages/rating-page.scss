@@ -1,0 +1,18 @@
+@import "../base/var.scss";
+.stage-work{
+	height: calc(100vh - remy(48));
+	display: flex;
+	.container {display: flex;}
+			
+		
+}
+.stage-work__content{
+	display: flex;
+	flex-direction: column;
+	row-gap:1rem;
+	&>*{width: 100%; }
+	
+	.stage-work__btn{margin-top: auto;}
+	.hide-details{height: calc(100vh - remy(420))}
+	
+}
