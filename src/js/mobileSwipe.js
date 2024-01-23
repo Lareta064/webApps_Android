@@ -108,9 +108,27 @@ Swipe.prototype.run = function () {
 		this.handleTouchMove(evt);
 	}.bind(this), false);
 };
-var swiper1 = new Swipe('#swipe1');
-var swiper2 = new Swipe('#swipe2');
-var swiper3 = new Swipe('#swipe3');
+const swipeBlock1 = document.querySelector('#swipe1');
+const swipeBlock2 = document.querySelector('#swipe2');
+const swipeBlock3 = document.querySelector('#swipe3');
+if (swipeBlock1){
+	var swiper1 = new Swipe('#swipe1');
+	swiper1.onUp(upHandler);
+	swiper1.onDown(downHandler);
+	swiper1.run();
+}
+if (swipeBlock2) {
+	var swiper2 = new Swipe('#swipe2');
+	swiper2.onUp(upHandler);
+	swiper2.onDown(downHandler);
+	swiper2.run();
+}
+if (swipeBlock3) {
+	var swiper3 = new Swipe('#swipe3');
+	swiper3.onUp(upHandler);
+	swiper3.onDown(downHandler);
+	swiper3.run();
+}
 
 const toggleClass = document.querySelectorAll('.toggle-class');
 function upHandler(){
@@ -141,12 +159,3 @@ function downHandler() {
 		}
 	}
 }
-swiper1.onUp(upHandler);
-swiper2.onUp(upHandler);
-swiper3.onUp(upHandler);
-swiper1.onDown(downHandler);
-swiper2.onDown(downHandler);
-swiper3.onDown(downHandler);
-swiper1.run();
-swiper2.run();
-swiper3.run();
