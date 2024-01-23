@@ -1,13 +1,16 @@
 @import "../base/var.scss";
-.drop-filter {
-	
+
+.drop-filter.custom-drop{
+  
+}
+ .custom-drop {
 	z-index: 3;
 	position: relative;
 
 	&__input {
 		position: relative;
 		input {
-			border-radius: 0;
+			
 			width: 100%;
 			display: block;
 			height: remy(35);
@@ -89,16 +92,16 @@
 
 }
 .drop-filter.active {
-	.drop-filter__list {
+	.custom-drop__list {
 		display: block;
 	}
 
-	.drop-filter__input {
+	.custom-drop__input {
 		border-radius: remy(8) remy(8) 0 0;
 	}
 }
 
-.drop-filter__input:after {
+.drop-filter .custom-drop__input:after {
 	content: '';
 	display: block;
 	width: remy(19);

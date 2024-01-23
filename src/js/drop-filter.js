@@ -3,9 +3,9 @@
 const dropFilters = document.querySelectorAll('.drop-filter');
 if (dropFilters.length > 0) {
 	for (let item of dropFilters) {
-		const itemSelect = item.querySelector('.drop-filter__input');
-		const itemDrop = item.querySelector('.drop-filter__list');
-		// const itemDropItems = item.querySelectorAll('.drop-filter__item');
+		const itemSelect = item.querySelector('.custom-drop__input');
+		const itemDrop = item.querySelector('.custom-drop__list');
+		
 
 		item.addEventListener('click', function (e) {
 

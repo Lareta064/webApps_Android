@@ -1,0 +1,37 @@
+@import "../base/var.scss";
+.profile-location{
+  height: calc(100vh - 150px);
+}
+.profile-location-map{
+	height: calc(100vh - 200px);
+}
+.profile-location-form{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	max-height: 60vh;
+	padding: remy(16);
+}
+.custom-search.drop-filter {
+	.drop-filter__input:after{display: none;}
+	.drop-filter__input .search-btn{
+		position: absolute;
+		right: 1px;
+		top: 1px;
+		height: auto;
+		bottom: 1px;
+		z-index: 3;
+		background-color: $bodyBg;
+		border-radius: remy(10);
+	}
+	.drop-filter__input input{
+		height: remy(43);
+		background-color: $bodyBg;
+		border-radius: remy(10);
+	}
+}
+.custom-search .search-input:not(:empty){
+	
+}
