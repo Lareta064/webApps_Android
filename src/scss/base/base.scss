@@ -138,6 +138,9 @@ select:-webkit-autofill:focus {
 main{
 	padding-bottom: remy(130);
 }
+.ios-device main{
+	padding-bottom: remy(180);
+}
 .container{
 	width: 100%;
 	max-width: remy(375);
