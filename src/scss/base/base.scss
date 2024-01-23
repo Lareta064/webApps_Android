@@ -154,12 +154,14 @@ main{
 	&>*{width: 100%;}
 
 }
+.flex-center,
 .flex-between{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	column-gap: remy(12);
 }
+.flex-center{justify-content: center;}
 .base-list{
 	a {
 		display: flex;

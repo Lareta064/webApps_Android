@@ -1,0 +1,12 @@
+@import "../base/var.scss";
+.profile-settings{
+	
+	.user-data{
+		padding-top: remy(8);
+	}
+	.title-20{
+		margin-bottom: remy(16);
+	}
+}
+.form-fieldset +.form-fieldset{margin-top: remy(24);}
+.profile-settings  .flex-center{margin-top: 1.5rem;}

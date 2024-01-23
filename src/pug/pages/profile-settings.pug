@@ -1,0 +1,89 @@
+extends ../layouts/layout.pug
+
+block content
+	header.header.header-sticky
+		.container
+			.header-content
+				a(href="profile-page.html").link-left Назад
+				h1.h1 Настройки
+				.header-content__abs
+					a(href="notifications.html").btn-notify
+						span.label-num 3
+						svg.svg-notify
+							use(href="./img/spriteSvg.svg#svg-notify")
+
+	main.profile-settings
+		.container
+			.form-fieldset
+				.title-20 Личные данные
+				.user-data
+					.form-item
+						label.abs-label ФИО
+						input.round-input(type="text" name="name" value="Иванов Иван Иванович")
+					
+					.form-item
+						label.abs-label Адрес проживания
+						input.round-input(type="text" name="userAddress" value="г. Москва, улица Тверская, дом 53 с.2")
+					
+					.form-item
+						label.abs-label Телефон
+						input.round-input(type="text" name="userPhone"  value="+7 (999) 999 99 99")
+					
+					.form-item
+						label.abs-label Почта
+						input.round-input(type="email" name="userEmail"  value="example@mail.ru")
+			
+			//========  Уведомления ========
+			.form-fieldset
+				.title-20 Уведомления
+				.simple-card.user-notice
+					.flex-between
+						.user-location__content
+							svg.svg-notify
+								use(href="./img/spriteSvg.svg#svg-notify")
+							p Настройка уведомлений
+						
+						a(href="").link-right.link-right--big
+			
+			
+			//======== Где получать заказы? ========
+			.form-fieldset
+				.title-20 Где получать заказы?
+				
+				.simple-card.user-location
+					.flex-between
+						.user-location__content
+							svg.svg-pin
+								use(href="./img/spriteSvg.svg#svg-pin")
+							.user-location__input
+								input(type="text" readonly value="Московская область")
+						
+						a(href="").link-right.link-right--big
+
+			.flex-center
+				a(href="#!").icon-link.log-out-link
+					svg.svg-exit
+						use(href="./img/spriteSvg.svg#svg-exit")
+					span Выход
+	//============= FOOTER =============
+	footer.nav-menu-panel
+		nav.nav-menu
+			a(href="monitoring.html")
+				svg.svg-monitoring
+					use(href="./img/spriteSvg.svg#svg-monitoring")
+				span Мониторинг
+			a(href="current-task-page.html")
+				svg.svg-task
+					use(href="./img/spriteSvg.svg#svg-task")
+				span Текущ задача
+			a(href="rating-page.html")
+				svg.svg-rating
+					use(href="./img/spriteSvg.svg#svg-rating")
+				span Рейтинг
+			a.active(href="profile-page.html")
+				svg.svg-profile
+					use(href="./img/spriteSvg.svg#svg-profile")
+				span Профиль
+
+block variables
+	-var title = "Профиль пользователя";
