@@ -1,0 +1,34 @@
+@import "../base/var.scss";
+.productivity-card {
+	width: 100%;
+	border-radius: remy(20);
+	background: #FFF;
+	box-shadow: 0px 0px 8px 4px rgba(151, 151, 151, 0.10);
+	padding: remy(16);
+
+	&>*+* {
+		margin-top: remy(16);
+	}
+
+	.loading-donut {
+		margin: 0 auto;
+	}
+
+}
+
+.productivity-card--mini {
+	border-radius: remy(12);
+	padding: remy(16);
+	text-align: center;
+}
+
+.productivity-card__group {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: remy(16);
+}
+.productivity-list{
+	padding-top: remy(4);
+	li{display: flex; column-gap:remy(12); align-items: center;}
+	li+li{margin-top: remy(8);}
+}

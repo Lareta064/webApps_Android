@@ -53,6 +53,40 @@ block content
 
 						img(src="./img/chart.webp", alt="alt")
 	
+					.productivity-card__group
+						.productivity-card.productivity-card--mini
+							+circle-progress-medium(98)
+							p Выполнено вовремя
+						.productivity-card.productivity-card--mini
+							+circle-progress-medium(35)
+							p Повторных заказов
+					
+					.productivity-list
+						ul
+							li
+								span Кол-во выполненных заказов:
+								span.txt-accent 41
+
+							li
+								span Всего заработано: 
+								span.txt-accent 804 674 ₽
+							li
+								span Средний заработок (мес.):
+								span.txt-accent  68 674 ₽
+
+							li
+								span Средний заработок (год.):
+								span.txt-accent 804 674 ₽
+							li
+								span Дней отработано:
+								span.txt-accent 365
+
+							li
+								span Сред. кол-во заказов в мес.:
+								span.txt-accent  5
+							li
+								span Сред. кол-во заказов в год: 
+								span.txt-accent  50
 	//============= FOOTER =============
 	footer.nav-menu-panel
 		nav.nav-menu
