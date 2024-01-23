@@ -34,6 +34,11 @@
 		}
 	}
 }
+.link-left.link-left--big:before{
+	width: remy(24);
+	height:remy(24);
+	background-size:remy(16);
+}
 .link-right{
 	position: relative;
 	

@@ -40,14 +40,20 @@
 	padding-block: remy(12);
 	.h1{text-align: center;}
 }
-.header-flex{
-	
-}
-.header-sticky{
+
+.header-sticky, .header-shadow{
 	position: sticky;
 	top:0;
 	z-index: 5;
 }
+.header-shadow{
+	border-radius: 0 0 remy(16) remy(16);
+	box-shadow: $bsh;
+	background-color: #fff;
+	
+}
+.header-shadow .header-content{display: flex;
+	align-items: center; column-gap: remy(16)}
 .header-content{position: relative;}
 
 .header-content__abs{
