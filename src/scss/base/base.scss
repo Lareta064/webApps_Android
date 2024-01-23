@@ -158,6 +158,7 @@ main{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	column-gap: remy(12);
 }
 .base-list{
 	a {

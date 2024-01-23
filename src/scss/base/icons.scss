@@ -87,3 +87,19 @@ svg.svg-profile{
 		background-color: lighten($accent, 10%);
 	}
 }
+.svg-settings {
+	color: $accent;
+	width: remy(24);
+	height: remy(24);
+	fill: transparent;
+	transition: .3s;
+
+	&:hover {
+		color: #1C274C;
+	}
+}
+svg.svg-pin{
+	width: remy(22);
+	height: remy(24);
+	fill: transparent;
+}

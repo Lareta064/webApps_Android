@@ -1,0 +1,26 @@
+@import "../base/var.scss";
+.profile-card{
+	&>*+*{margin-top: remy(8);}
+	.profile-skills{
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		column-gap: remy(12);
+	}
+}
+.user-location__content{
+	display: flex;
+	align-items: center;
+	column-gap: remy(6);
+	flex-grow: 1;
+}
+.user-location__input{
+	flex-grow: 1;
+	input{width: 100%;}
+}
+.user-notice .svg-notify{
+	width: remy(22);
+	height: remy(22);
+}
+.profile-main{padding-top: 1rem;}
+.profile-main .simple-card+ .simple-card{margin-top:  1rem;}
