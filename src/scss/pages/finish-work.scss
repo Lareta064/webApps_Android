@@ -3,9 +3,9 @@
 	height: calc(100vh - remy(48));
 	display: flex;
 	.container {display: flex;}
-			
-		
 }
+.ios-device .stage-work {
+	height: calc(100vh - remy(80));}
 .stage-work__content{
 	display: flex;
 	flex-direction: column;
@@ -13,6 +13,6 @@
 	&>*{width: 100%; }
 	
 	.stage-work__btn{margin-top: auto;}
-	.hide-details{height: calc(100vh - remy(420))}
+	.hide-details{height: calc(100vh - 30.25rem)}
 	
 }

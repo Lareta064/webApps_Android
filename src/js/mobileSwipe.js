@@ -108,45 +108,38 @@ Swipe.prototype.run = function () {
 		this.handleTouchMove(evt);
 	}.bind(this), false);
 };
-var swiper1 = new Swipe('#swipe1');
-var swiper2 = new Swipe('#swipe2');
-var swiper3 = new Swipe('#swipe3');
-
-const toggleClass = document.querySelectorAll('.toggle-class');
-function upHandler(){
-	if (toggleClass.length > 0) {
-			
-			for (let item of toggleClass) {
-				
-				const addClassBtn = item.querySelector('.toggle-class-add');
-				if (addClassBtn) {
-					item.classList.add('open');
-					
-				}
-				
-			}
-		}
+const swipeBlock1 = document.querySelector('#swipe1');
+const swipeBlock2 = document.querySelector('#swipe2');
+const swipeBlock3 = document.querySelector('#swipe3');
+if (swipeBlock1){
+	var swiper1 = new Swipe('#swipe1');
+	swiper1.onUp(()=>upHandler(swiper1.element));
+	swiper1.onDown(()=>downHandler(swiper1.element));
+	swiper1.run();
 }
-function downHandler() {
-	if (toggleClass.length > 0) {
-
-		for (let item of toggleClass) {
-
-			const addClassBtn = item.querySelector('.toggle-class-add');
-			if (addClassBtn) {
-				item.classList.remove('open');
-
-			}
-
-		}
-	}
+if (swipeBlock2) {
+	var swiper2 = new Swipe('#swipe2');
+	swiper2.onUp(() => upHandler(swiper2.element));
+	swiper2.onDown(()=>downHandler(swiper2.element));
+	swiper2.run();
 }
-swiper1.onUp(upHandler);
-swiper2.onUp(upHandler);
-swiper3.onUp(upHandler);
-swiper1.onDown(downHandler);
-swiper2.onDown(downHandler);
-swiper3.onDown(downHandler);
-swiper1.run();
-swiper2.run();
-swiper3.run();
+if (swipeBlock3) {
+	var swiper3 = new Swipe('#swipe3');
+	swiper3.onUp(() => upHandler(swiper3.element));
+	swiper3.onDown(()=>downHandler(swiper3.element));
+	swiper3.run();
+}
+
+function upHandler(element){
+	if(!element) 
+		console.error('Up handler requires element argument');
+	const btnParent = element.closest('.toggle-class');
+	btnParent.classList.add('open');
+}
+
+function downHandler(element) {
+	if (!element)
+		console.error('Down handler requires element argument');
+	const btnParent = element.closest('.toggle-class');
+	btnParent.classList.remove('open');
+}

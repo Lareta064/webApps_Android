@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const bodyEl = document.querySelector('body');
-	
+	let isIOS = /iPad|iPhone|iPod/.test(navigator.platform)
+		|| (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+	if (!isIOS){
+		bodyEl.classList.remove('ios-device');
+	}
 	const sortOut = document.querySelector('.sort-block__out');
 	const sortList = document.querySelector('#sort-cat');
 	

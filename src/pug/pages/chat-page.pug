@@ -1,0 +1,69 @@
+extends ../layouts/layout.pug
+
+block content
+	header.header.header-shadow
+		.container
+			//========== шапка ===========
+			.header-content
+				a(href="single-task-page.html").link-left.link-left--big
+				
+				//======== аватарка ==========
+				.chat-avatar-group
+					.avatar-icon(style="background-image: url(./img/avatar.webp)")
+					span.online-state
+
+				h1.h1 Администратор
+			
+
+	main.chat-main
+		.container
+			.chat-window
+				//======Блок с сообщениями =====
+				.chat-window__messages.scroll-right
+					
+					//==== входящие сообщения ======
+					.chat-window__message
+						p Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
+						.chat-time
+							.chat-icon
+								.db-check
+							p 16:27
+					.chat-window__message
+						p Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
+						.chat-time
+							.chat-icon
+								.db-check
+							p 16:27
+					
+					//==== ответные сообщения ======
+					.chat-window__responce
+						p Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in
+						.chat-time
+							.chat-icon
+								.db-check
+							p 16:27
+					
+					.chat-window__responce
+						p Lorem ipsum dolor sit amet consectetur adipiscing elit 
+						.chat-time
+							.chat-icon
+								.db-check
+							p 16:27
+					
+				//======Блок для создания сообщения =====
+				.chat-window__input
+					form.create-message
+						//==== поле ввода текста =====
+						.create-message__text
+							input.input-text(type="text")
+							button(type="submit").create-message__send
+								.send-icon
+						
+						//====== прикрепить файл скрепка ======
+						.create-message__select
+							input#add-media.inputfile(type='file' )
+							label(for='add-media')
+								span.add-icon
+
+block variables
+	-var title = "Chat page";

@@ -20,6 +20,7 @@
 	&.open{
 		.hide-details {
 			display: block;
+			max-height: unset;
 		}
 		.hide-details__close svg {
 			transform: rotate(-90deg);
@@ -31,7 +32,7 @@
 	.single-task-details{
 		transform: translateY(calc(100% - 16.25rem));
 	}
-	.hide-details{max-height: calc(100vh - 550px);}
+	.hide-details{max-height: calc(100vh - 500px);}
 	.simple-card{margin-top: remy(28);}
 }
 .single-task-location.single-task--current.open {
