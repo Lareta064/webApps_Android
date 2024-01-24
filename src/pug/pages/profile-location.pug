@@ -13,7 +13,7 @@ block content
 							use(href="./img/spriteSvg.svg#svg-notify")
 
 	main.profile-location.toggle-class
-		.custom-container
+		.container
 			//========= map ==========
 			.profile-location-map
 				script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A13e02d731c04b56220a2a064d1fa54db38ac5402f907fd4bdf75e632a107fa8e&width=100%&height=100%&lang=ru_RU&scroll=false')
@@ -24,17 +24,17 @@ block content
 				//==========видимая часть ==========
 				.visible-details
 					.hide-details__open.toggle-class-add#swipe1
-					.custom-search.drop-filter
-						.custom-search__input
-							input(type="text" readonly value="Введите название")
+					.custom-search.custom-drop
+						.custom-drop__input
+							input(type="text"  value="Введите название")
 							button.search-btn
-						.custom-search__list
+						.custom-drop__list
 							ul
-								li.drop-filter__item
+								li.custom-drop__item
 									a(href="#!") Московская область
-								li.drop-filter__item
+								li.custom-drop__item
 									a(href="#!") Самарская область
-								li.drop-filter__item
+								li.custom-drop__item
 									a(href="#!") Ульяновская область
 								
 	

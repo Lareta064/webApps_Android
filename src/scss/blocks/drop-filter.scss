@@ -1,7 +1,10 @@
 @import "../base/var.scss";
 
 .drop-filter.custom-drop{
-  
+	.custom-drop__list {
+		
+		display: none;
+	}
 }
  .custom-drop {
 	z-index: 3;
@@ -31,11 +34,10 @@
 		top: 100%;
 		right: 0;
 		background-color: white;
-		// box-shadow: 0px 0px remy(8) remy(4) $boxSh;
 		border-radius: 0 0 remy(8) remy(8);
 		border: 1px solid $greyBorder;
 		border-top: none;
-		display: none;
+		
 
 		ul {
 			max-height: remy(130);
@@ -91,7 +93,7 @@
 	}
 
 }
-.drop-filter.active {
+.drop-filter.custom-drop.active {
 	.custom-drop__list {
 		display: block;
 	}

@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	/*===================CUSTOM DROP FILTER====================*/
-	const dropFilters = document.querySelectorAll('.drop-filter');
+	const dropFilters = document.querySelectorAll('.custom-drop');
 	if (dropFilters.length > 0) {
 		for (let item of dropFilters) {
 			const itemSelect = item.querySelector('.custom-drop__input');

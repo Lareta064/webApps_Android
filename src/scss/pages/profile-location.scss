@@ -1,22 +1,25 @@
 @import "../base/var.scss";
 .profile-location{
-  height: calc(100vh - 150px);
+  height: calc(100vh - 140px);
+  position: fixed;
+  top:remy(48);
+  left: 50%;
+  transform:translate(-50%);
+  width: 100%;
+  max-width: remy(375);
+  
+  .container{padding: 0;}
 }
 .profile-location-map{
 	height: calc(100vh - 200px);
-}
-.profile-location-form{
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 5;
-	max-height: 60vh;
-	padding: remy(16);
+	top: 0;
+	left: 0;right: 0;
 }
-.custom-search.drop-filter {
-	.drop-filter__input:after{display: none;}
-	.drop-filter__input .search-btn{
+
+.custom-search.custom-drop {
+	
+	.custom-drop__input .search-btn{
 		position: absolute;
 		right: 1px;
 		top: 1px;
@@ -26,12 +29,21 @@
 		background-color: $bodyBg;
 		border-radius: remy(10);
 	}
-	.drop-filter__input input{
+	.custom-drop__input input{
 		height: remy(43);
 		background-color: $bodyBg;
 		border-radius: remy(10);
 	}
 }
-.custom-search .search-input:not(:empty){
-	
+.profile-location-form {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	height: 42vh;
+	padding: remy(16);
+	transform: translateY(calc(42vh - 90px ));
+	transition: .3s; 
 }
+.toggle-class.open .profile-location-form{transform: translateY(0);}
