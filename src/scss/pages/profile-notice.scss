@@ -1,0 +1,48 @@
+@import "../base/var.scss";
+.profile-notice__group >*+*{margin-top: remy(12);}
+.notice-card__marker{
+	width: remy(17);
+	height: remy(17);
+	border-radius: 50%;
+	background-color: $accent;
+	flex-shrink:0;
+}
+.notice-card__text{
+	line-height: 1.3;
+}
+.notice-card__text span{
+	font-weight: 500;
+}
+.notice-card__footer{
+	padding-top: 1rem;
+	border-top:1px solid $greyBorder;
+	text-align: center;
+}
+.profile-notice__history{
+	padding-top: remy(24);
+
+	.title-20{margin-bottom: remy(10);}
+}
+.table-history{
+	padding-bottom: remy(24);
+	td{font-size: remy(14); letter-spacing: 0.01em; white-space: nowrap;}
+	thead td{
+		border-top: none;
+		color: $txtGrey;
+	}
+	thead	td +td{text-align: right; width: remy(100); padding-left: remy(5);padding-right: 0;
+	}
+	td{
+      padding-top: remy(10);
+	  padding-bottom: remy(9);
+	  border-top: 1px solid $lightGrey;
+	}
+	td:first-child{
+		padding-right: remy(6);
+		
+		p{white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: remy(223);}
+	}
+}

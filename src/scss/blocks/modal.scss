@@ -1,12 +1,12 @@
 @import "../base/var.scss";
 /*=======MODAL POP UP====*/
 *[frame-modal] {
-	transform: scale(0);
+	transform: translateX(110%);
 	transition: .3s; 
 }
 
 *.visible[frame-modal] {
-	transform: scale(1);
+	transform:translateX(0);
 	display: flex;
 	z-index: 10;
 	animation-name: opacity;

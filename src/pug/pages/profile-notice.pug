@@ -1,0 +1,110 @@
+extends ../layouts/layout.pug
+
+block content
+	header.header.header-sticky
+		.container
+			.header-content.flex-between
+				a(href="profile-page.html").link-left Назад
+				h1.h1 Уведомления
+				.header-content__abs
+					a(href="notifications.html").btn-settings
+						svg.svg-settings
+							use(href="./img/spriteSvg.svg#svg-settings")
+
+	main.profile-notice
+		.container
+			//========= данные юзера  ========= 
+			.profile-notice__group
+				.title-20 Непрочитанные
+				
+				//========== notice-card ==========
+				.simple-card.notice-card
+					.flex-between
+						.txt-14  Вы просрочили заказ
+						
+						//========== синий круг в правом углу карточки ======
+						span.notice-card__marker
+					
+					.notice-card__text
+						p Внимание, заказ #[span “Название задачи, которое может переноситья на след...” ]#[span.txt-red  просрочен]. Свяжитесь с оператором и объясните причну просрочки заказа
+			
+					.notice-card__footer
+						a(href="chat-page.html").link-right Чат с оператором
+			
+				//========== notice-card ==========
+				.simple-card.notice-card
+					.flex-between
+						.txt-14  Осталось 12 часов
+						
+						//========== синий круг в правом углу карточки ======
+						span.notice-card__marker
+					
+					.notice-card__text
+						p Внимание, осталось #[span.txt-red 12 ч.] на выполнение заказа #[span  “Название задачи, которе может переноситья на следу...”.] Если Вы просрочите заказ, то это негативо скажется на Вашем рейтинге.
+					.notice-card__footer
+						.txt-accent Прочитано	
+	
+			.profile-notice__history
+				.title-20 История
+				table.table-history
+					//======== table head =========
+					thead
+						tr
+							td 
+								p Уведомление
+							td 
+								p Дата, время
+					
+					//======== table body =========
+					tbody
+						//======== single row =========
+						tr
+							td
+								p Вы взяли заказ “Название задачи Вы взяли заказ “Название задачи....”
+							td
+								p 08.08.23, 18:00
+						//======== single row =========
+						tr
+							td
+								p Вы взяли заказ “Название задачи...”
+							td
+								p 08.08.23, 18:00
+						//======== single row =========
+						tr
+							td
+								p Вы взяли заказ “Название задачи...”
+							td
+								p 08.08.23, 18:00
+						//======== single row =========
+						tr
+							td
+								p Вы взяли заказ “Название задачи...”
+							td
+								p 08.08.23, 18:00
+	
+				//========== btn More=========
+				.flex-center
+					button.link-bottom Показать все
+
+	//============= FOOTER =============
+	footer.nav-menu-panel
+		nav.nav-menu
+			a(href="monitoring.html")
+				svg.svg-monitoring
+					use(href="./img/spriteSvg.svg#svg-monitoring")
+				span Мониторинг
+			a(href="current-task-page.html")
+				svg.svg-task
+					use(href="./img/spriteSvg.svg#svg-task")
+				span Текущ задача
+			a(href="rating-page.html")
+				svg.svg-rating
+					use(href="./img/spriteSvg.svg#svg-rating")
+				span Рейтинг
+			a.active(href="profile-page.html")
+				svg.svg-profile
+					use(href="./img/spriteSvg.svg#svg-profile")
+				span Профиль
+
+block variables
+	-var title = "Профиль пользователя";

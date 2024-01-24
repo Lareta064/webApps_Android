@@ -63,3 +63,17 @@
 	
 	z-index: 10;
 }
+.header-content.flex-between {
+	.header-content__abs {
+		position: relative;
+		right: auto;
+		top: auto;
+
+	}
+}
+.header-content{
+	.svg-settings{
+		width: remy(29);
+		height: remy(29);
+	}
+}
