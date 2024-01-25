@@ -4,7 +4,7 @@ block content
 	header.header.header-sticky
 		.container
 			.header-content
-				a(href="monitoring.html").link-left Назад
+				a(href="index.html").link-left Назад
 				.header-content__abs
 					a(href="notifications.html").btn-notify
 						span.label-num 3
@@ -13,7 +13,7 @@ block content
 
 	main.single-task-page
 		.container
-			.task-card
+			.task-card.pb-110
 				.tc__header Название задачи, которе может переноситья на следующую строку, а потом и на ещё 1
 				
 				.tc__body
@@ -34,13 +34,13 @@ block content
 					.tc__requir Требования к форме: требуется, выдадут на месте
 					.tc__location МО, г. Москва, Тверской рай-н Тверская, 1
 					
-					a(href="#!" frame-btn="location").link-right Показать на карте
+					a(href="location-page.html" ).link-right Показать на карте
 				
 				.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
 				
 				.tc__notice Внимание! Осталось #[span 22 ч. 29 мин.] на принятие решения по заказу
                 
-				.tc__footer
+				.tc__footer.fixed-bottom
 					a(href="single-task-page.html" ).btn Принять
 					a(href="chat-page.html").link-right Чат с оператором
 					
@@ -52,7 +52,7 @@ block content
 	//============= FOOTER =============
 	footer.nav-menu-panel
 		nav.nav-menu
-			a.active(href="monitoring.html")
+			a.active(href="index.html")
 				svg.svg-monitoring
 					use(href="./img/spriteSvg.svg#svg-monitoring")
 				span Мониторинг

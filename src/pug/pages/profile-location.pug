@@ -3,7 +3,7 @@ extends ../layouts/layout-swipe-touch.pug
 block content
 	header.header.header-shadow
 		.container
-			.header-content
+			.header-content.flex-between
 				a(href="profile-page.html").link-left Назад
 				h1.h1 Локация
 				.header-content__abs
@@ -41,7 +41,7 @@ block content
 	//============= FOOTER =============
 	footer.nav-menu-panel
 		nav.nav-menu
-			a(href="monitoring.html")
+			a(href="index.html")
 				svg.svg-monitoring
 					use(href="./img/spriteSvg.svg#svg-monitoring")
 				span Мониторинг

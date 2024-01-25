@@ -27,7 +27,7 @@
 	padding-bottom: remy(24);
 	td{font-size: remy(14); letter-spacing: 0.01em; white-space: nowrap;}
 	thead td{
-		border-top: none;
+		
 		color: $txtGrey;
 	}
 	thead	td +td{text-align: right; width: remy(100); padding-left: remy(5);padding-right: 0;
@@ -35,7 +35,7 @@
 	td{
       padding-top: remy(10);
 	  padding-bottom: remy(9);
-	  border-top: 1px solid $lightGrey;
+	  border-bottom: 1px solid $lightGrey;
 	}
 	td:first-child{
 		padding-right: remy(6);
@@ -46,3 +46,33 @@
 		width: remy(223);}
 	}
 }
+.profile-notice,
+.profile-notice-settings{
+	padding-top: remy(16);
+}
+.setting-card{
+	border-radius: remy(12);
+	padding-block: remy(12);
+	background: #FFF;
+	box-shadow: 0px 0px 8px 4px rgba(151, 151, 151, 0.10);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	span{margin-bottom: remy(8);}
+	.switch-item{margin-top: remy(16); span{margin-bottom: 0;}}
+	svg{color: $text;}
+	p{letter-spacing: 0.02rem; font-weight: 500;}
+}
+.notice-settings-group{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: remy(13);
+}
+.notice-settings__radio{
+	margin-top: remy(20);
+}
+.notice-settings__radio .title-20{
+	margin-bottom: remy(12);
+}
+
+.form-radio +.form-radio{margin-top: remy(10);}
