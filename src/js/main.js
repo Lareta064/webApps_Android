@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		for (let item of modalFramesOpen) {
 			item.addEventListener('click', function (e) {
+			    
 				for (let item of modalFrames) {
 					item.classList.remove('visible');
 

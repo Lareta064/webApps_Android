@@ -30,7 +30,7 @@
 
 .single-task-location.single-task--current{
 	.single-task-details{
-		transform: translateY(calc(100% - 16.25rem));
+		transform: translateY(calc(100% - ((100vh - 100dvh) + 16.25rem)));
 	}
 	.hide-details{max-height: calc(100vh - 500px);}
 	.simple-card{margin-top: remy(28);}
