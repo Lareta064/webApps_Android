@@ -1,0 +1,94 @@
+extends ../layouts/layout.pug
+
+block content
+	header.header.header-sticky
+		.container
+			.header-content.d-flex
+				a(href="profile-notice.html").link-left.link-left--big
+				h1.title-20 Настройки уведомлений
+				
+
+	main.profile-notice-settings
+		.container
+			.notice-settings-group
+				//======== single-item ==========
+				.setting-card
+					span
+						svg.svg-notify(style="width:25px; height:24px")
+							use(href="./img/spriteSvg.svg#svg-notify")
+					p Push
+					
+					//======== switch ==========
+					label.switch-item.switch-toggle
+						input(type="checkbox" )
+						.switch-item__toggle
+							span
+							span
+				
+				//======== single-item ==========
+				.setting-card
+					span
+						svg.svg-mail(style="width:25px; height:24px")
+							use(href="./img/spriteSvg.svg#svg-mail")
+					p Email
+					
+					//======== switch ==========
+					label.switch-item.switch-toggle
+						input(type="checkbox" checked)
+						.switch-item__toggle
+							span
+							span
+				
+				//======== single-item ==========
+				.setting-card
+					span
+						svg.svg-sms(style="width:24px; height:24px")
+							use(href="./img/spriteSvg.svg#svg-sms")
+					p SMS
+					
+					//======== switch ==========
+					label.switch-item.switch-toggle
+						input(type="checkbox")
+						.switch-item__toggle
+							span
+							span
+
+			//======== radio group ========
+			.notice-settings__radio
+				.title-20 Присылать
+				
+				.radio-group-wrapper
+					label.form-radio
+						input(type="radio" name="radio_name")
+						span Только важные
+					
+					label.form-radio
+						input(type="radio" name="radio_name")
+						span Все
+					
+					label.form-radio
+						input(type="radio" name="radio_name")
+						span Никакие
+	
+	//============= FOOTER =============
+	footer.nav-menu-panel
+		nav.nav-menu
+			a(href="index.html")
+				svg.svg-monitoring
+					use(href="./img/spriteSvg.svg#svg-monitoring")
+				span Мониторинг
+			a(href="current-task-page.html")
+				svg.svg-task
+					use(href="./img/spriteSvg.svg#svg-task")
+				span Текущ задача
+			a(href="rating-page.html")
+				svg.svg-rating
+					use(href="./img/spriteSvg.svg#svg-rating")
+				span Рейтинг
+			a.active(href="profile-page.html")
+				svg.svg-profile
+					use(href="./img/spriteSvg.svg#svg-profile")
+				span Профиль
+
+block variables
+	-var title = "Профиль пользователя";

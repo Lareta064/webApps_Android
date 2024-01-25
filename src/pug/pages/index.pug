@@ -1,36 +1,110 @@
 extends ../layouts/layout.pug
 
 block content
-	.container
-		a(href="main.html" style="display: block;") Главная
-		a(href="icons.html" style="display: block;") ICONS
-		a(href="monitoring.html" style="display: block;") Monitoring
+	header.header.header-sticky
+		.container
+			.header-content
+				h1.h1 Мониторинг
+				.header-content__abs
+					a(href="notifications.html").btn-notify
+						span.label-num 3
+						svg.svg-notify
+							use(href="./img/spriteSvg.svg#svg-notify")
 
+	main.monitoring-main
+		.container
+			.monitoring-tabs.tabs
+				//========= tabs toggle menu ========
+				.tabs-menu
+					nav
+						button.tabs-menu__item.active(tab-btn="1") Назначенные
+						button.tabs-menu__item(tab-btn="2") Ожидающие
+						button.tabs-menu__item(tab-btn="3") Завершенные
+				
+				//========== строка Сортировать =========
+				.sort-block
+					button.btn-sort#sort-btnt(frame-btn="sort-tasks")
+						span.icon-sort
+						span Сортировать
+					.sort-block__out
+				
+				
+				//========= tabs content ========
+				.tabs-content
+					//========== контент Назначенные =======
+					.tabs-body.active.task-cards-wrapper(tab-body="1")
+						+task-card
+						+task-card
+						+task-card
+						
 
+					//========== контент Ожидающие =======
+					.tabs-body.task-cards-wrapper(tab-body="2")
+						+task-card-pending
+						+task-card-pending
+						+task-card-pending
+					
+					//========== контент Завершенные =======
+					.tabs-body.task-cards-wrapper(tab-body="3")
+						+task-card-completed
+						+task-card-completed
+						+task-card-completed
+						+task-card-completed
+	
+	//============= FOOTER =============
+	footer.nav-menu-panel
+		nav.nav-menu
+			a.active(href="index.html")
+				svg.svg-monitoring
+					use(href="./img/spriteSvg.svg#svg-monitoring")
+				span Мониторинг
+			a(href="current-task-page.html")
+				svg.svg-task
+					use(href="./img/spriteSvg.svg#svg-task")
+				span Текущ задача
+			a(href="rating-page.html")
+				svg.svg-rating
+					use(href="./img/spriteSvg.svg#svg-rating")
+				span Рейтинг
+			a(href="profile-page.html")
+				svg.svg-profile
+					use(href="./img/spriteSvg.svg#svg-profile")
+				span Профиль
 
-		header.header
-			.container
+	//========= popUp сортировка карточек с задачами ==========
+	.modal-frame-wrapper.sort-modal(frame-modal="sort-tasks")
+		.modal-frame
+			.modal-frame__body
+				p.title-20 Сортировать по
+				//============ Список сортировки ==========
+				ul.base-list#sort-cat
+					li 
+						a(href="#!").sort-list-cat
+							span Дате:
+							span.cat-type сначала новые
+					li 
+						a(href="#!").sort-list-cat
+							span Дате:
+							span.cat-type  сначала старые
+					li 
+						a(href="#!").sort-list-cat
+							span Регион:
+							span.cat-type сначала ближе
+					li 
+						a(href="#!").sort-list-cat
+							span Регион:
+							span.cat-type сначала дальше
 
-		.nav-menu-panel
-			nav.nav-menu
-				a.active(href="#!")
-					svg.svg-monitoring
-						use(href="./img/spriteSvg.svg#svg-monitoring")
-					span Мониторинг
-				a(href="#!")
-					svg.svg-task
-						use(href="./img/spriteSvg.svg#svg-task")
-					span Текущ задача
-				a(href="#!")
-					svg.svg-rating
-						use(href="./img/spriteSvg.svg#svg-rating")
-					span Рейтинг
-				a(href="#!")
-					svg.svg-profile
-						use(href="./img/spriteSvg.svg#svg-profile")
-					span Профиль
-		
-
-
+					li 
+						a(href="#!").sort-list-cat
+							span Дедлайн
+							span.cat-type ближе
+					li 
+						a(href="#!").sort-list-cat
+							span Дедлайн
+							span.cat-type дальше
+				
+				//============ Отмена ==========
+				button.sort-modal-close#cancel-sort(frame-close) Отмена
 block variables
-	-var title = "Page";
+	-var title = "Мониторинг";

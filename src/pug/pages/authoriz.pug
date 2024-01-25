@@ -1,0 +1,43 @@
+extends ../layouts/layout.pug
+
+block content
+	//=====================POPUP АВТОРИЗАЦИЯ ==================
+	.modal-frame-wrapper.flex-center.visible(frame-modal="authorize")
+		.modal-frame.modal-frame--small
+			.icon-close(frame-close)
+			.modal-frame__body
+				form.modal-form.login-form
+					.modal-form__logo
+						img(src="./img/logo-form.webp", width="115" alt="alt")
+					.head Авторизация
+					.form-item
+						label.abs-label Номер телефона
+						input.round-input(type="text" name=""  placeholder="+7 (999) 999 99 99")
+
+					.form-btn
+						button(frame-btn="authorize-confirm").btn Далее
+
+	//===================== АВТОРИЗАЦИЯ СМС код ==================
+	.modal-frame-wrapper.flex-center(frame-modal="authorize-confirm")
+		.modal-frame.modal-frame--small
+			.icon-close(frame-close)
+			.modal-frame__body
+				form.modal-form.confirm-phone-form
+					.modal-form__logo
+						img(src="./img/logo-form.webp", width="115" alt="alt")
+					.head Авторизация
+					p.sub-text Мы выслали вам СМС с кодом для потверждения
+
+					.code-input-group
+						input.code-input(type="text" autocomplete="off" name="")
+						input.code-input(type="text" autocomplete="off" name="")
+						input.code-input(type="text" autocomplete="off" name="")
+						input.code-input(type="text" autocomplete="off" name="")
+						input.code-input(type="text" autocomplete="off" name="")
+						input.code-input(type="text" autocomplete="off" name="")
+
+					.form-btn
+						button(type="submit").btn Далее
+						p Не пришел код? #[button.link Отправить] ещё раз
+block variables
+	-var title = "авторизация";

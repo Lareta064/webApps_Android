@@ -1,10 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
+   
+	/*   форма подтверждения смс*/
+	const inputs = document.querySelectorAll(".code-input");
+	
+	if (inputs.length > 0){	
+		inputs.forEach(((input, index) => {
+			input.addEventListener("input", (e => {
+				let value = e.target.value;
+				if (/^\d$/.test(value)) if (inputs[index + 1]) inputs[index + 1].focus();
+				e.target.value = value.replace(/\D/g, "").substring(0, 1);
+			}));
+		}));
+	}
+
+   //========определить, что ios ===========
 	const bodyEl = document.querySelector('body');
 	let isIOS = /iPad|iPhone|iPod/.test(navigator.platform)
 		|| (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 	if (!isIOS){
 		bodyEl.classList.remove('ios-device');
 	}
+
+	//========= сортировка на стр Мониторинг ========
 	const sortOut = document.querySelector('.sort-block__out');
 	const sortList = document.querySelector('#sort-cat');
 	

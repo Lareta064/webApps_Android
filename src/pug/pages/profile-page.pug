@@ -26,7 +26,7 @@ block content
 				.profile-id ID: 135643
 			
 			//======== Местоположение ========
-			.simple-card.user-location
+			a(href="profile-location.html").simple-card.user-location
 				.flex-between
 					.user-location__content
 						svg.svg-pin
@@ -34,22 +34,22 @@ block content
 						.user-location__input
 							input(type="text" readonly value="Московская область")
 					
-					a(href="profile-location.html").link-right.link-right--big
+					span.link-right.link-right--big
 
 			//======== Уведомления  ========
-			.simple-card.user-notice
+			a(href="profile-notice.html").simple-card.user-notice
 				.flex-between
 					.user-location__content
 						svg.svg-notify
 							use(href="./img/spriteSvg.svg#svg-notify")
 						p Настройка уведомлений
 					
-					a(href="profile-notice.html").link-right.link-right--big
+					span.link-right.link-right--big
 	
 	//============= FOOTER =============
 	footer.nav-menu-panel
 		nav.nav-menu
-			a(href="monitoring.html")
+			a(href="index.html")
 				svg.svg-monitoring
 					use(href="./img/spriteSvg.svg#svg-monitoring")
 				span Мониторинг

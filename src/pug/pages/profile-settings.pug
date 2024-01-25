@@ -36,21 +36,21 @@ block content
 			//========  Уведомления ========
 			.form-fieldset
 				.title-20 Уведомления
-				.simple-card.user-notice
+				a(href="profile-notice.html").simple-card.user-notice
 					.flex-between
 						.user-location__content
 							svg.svg-notify
 								use(href="./img/spriteSvg.svg#svg-notify")
 							p Настройка уведомлений
 						
-						a(href="profile-notice.html").link-right.link-right--big
+						span.link-right.link-right--big
 			
 			
 			//======== Где получать заказы? ========
 			.form-fieldset
 				.title-20 Где получать заказы?
 				
-				.simple-card.user-location
+				a(href="profile-location.html").simple-card.user-location
 					.flex-between
 						.user-location__content
 							svg.svg-pin
@@ -58,7 +58,7 @@ block content
 							.user-location__input
 								input(type="text" readonly value="Московская область")
 						
-						a(href="profile-location.html").link-right.link-right--big
+						span.link-right.link-right--big
 
 			.flex-center
 				a(href="#!").icon-link.log-out-link
@@ -68,7 +68,7 @@ block content
 	//============= FOOTER =============
 	footer.nav-menu-panel
 		nav.nav-menu
-			a(href="monitoring.html")
+			a(href="index.html")
 				svg.svg-monitoring
 					use(href="./img/spriteSvg.svg#svg-monitoring")
 				span Мониторинг
