@@ -136,11 +136,11 @@ select:-webkit-autofill:focus {
  
 }
 main{
-	padding-bottom: remy(180);
+	padding-bottom: remy(160);
 }
-.ios-device main{
-	padding-bottom: remy(180);
-}
+// .ios-device main{
+// 	padding-bottom: remy(180);
+// }
 .container{
 	width: 100%;
 	max-width: remy(375);

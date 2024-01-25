@@ -1,6 +1,6 @@
 @import "../base/var.scss";
 .stage-work{
-	height: calc(100vh - remy(48));
+	height: calc(100vh - 6rem);
 	display: flex;
 	.container {display: flex;}
 }
@@ -12,7 +12,14 @@
 	row-gap:1rem;
 	&>*{width: 100%; }
 	
-	.stage-work__btn{margin-top: auto;}
+	// .stage-work__btn{margin-top: auto;}
+	.stage-work__btn{
+		position: fixed;
+		top: calc(100vh - ((100vh - 100dvh) + remy(165)));
+		width: remy(300);
+		left:50%;
+		transform: translateX(-50%);
+	}
 	.hide-details{height: calc(100vh - 30.25rem)}
 	
 }
