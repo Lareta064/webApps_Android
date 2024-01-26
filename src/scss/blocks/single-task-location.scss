@@ -124,19 +124,7 @@
 .toggle-class.open .single-task-details{
 	transform: translateY(0);
 }
-.fixed-bottom{
-	width: remy(345);
-	background-color: #F9F9F9;
-	position: fixed;
-	padding-bottom: remy(20);
-	bottom: remy(90);
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 2;
-}
-.pb-110{
-	padding-bottom: remy(110)!important;
-}
+
 .task-description.modal-frame-wrapper{
 	.modal-frame{
 		width: remy(360);
