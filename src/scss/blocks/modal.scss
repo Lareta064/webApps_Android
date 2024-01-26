@@ -8,7 +8,7 @@
 *.visible[frame-modal] {
 	transform:translateX(0);
 	display: flex;
-	z-index: 10;
+	z-index: 20;
 	animation-name: opacity;
 	animation-duration: .3s;
 	animation-fill-mode: forwards;
@@ -38,9 +38,9 @@
 	border-radius: remy(8);
 	background: $white;
 	width: 100%;
-	max-width: remy(1000);
-	padding: remy(16);
-    border-radius: 0;
+	max-width: remy(375);
+	padding: remy(40) remy(16);
+    border-radius: remy(8);
 	.icon-close {
 		position: absolute;
 		top: remy(10);
@@ -71,9 +71,9 @@
 }
 .modal-frame.modal-frame--small{
 	width: auto;
-	width: remy(360);
+	width: 100%;
 	height: auto;
-	padding: remy(16);
+	padding: remy(40) remy(16);
 	
 }
 .modal-header__flex{

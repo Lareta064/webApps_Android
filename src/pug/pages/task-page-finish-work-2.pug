@@ -19,35 +19,12 @@ block content
 					span.check-icon
 					p.txt-accent.title-20 На сегодня работа выполнена
 						
-			
-				//========= карточка с описанием ==========
-				.current-task-card.toggle-class
-					.tc__header Название задачи, которе может переноситья на следующую строку, а потом и на ещё 1
+				
+				
+				.tc__header Название задачи, которое может переноситья на следующую строку, а потом и на ещё 1
 					
-					.hide-details__close.toggle-class-remove
-						p Подробнее о задаче
-						svg.svg-chevron
-							use(href="./img/spriteSvg.svg#svg-chevron")
-							
-					//========== скрытый блок ==========
-					.hide-details.tc__body
-						
-						.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
-						
-						.tc__price Потенциальная оплата: #[span 20 000] ₽ 
-					
-						.tc__date
-							.tc__cell Дата начало: #[span 08.10.23] в 
-							.tc__cell Дата окончания: #[span 18.10.23] в #[span 19:00]
-
-						.tc__time
-							.time-start Время начала труд. дня: #[span  9:00] 
-							.time-finish Время окончания  труд. дня: #[span 19:00]
-						
-						.tc__contractor Кол-во людей: #[span 6]
-						
-						.tc__requir Требования к форме: требуется, выдадут на месте
-						.tc__location МО, г. Москва, Тверской рай-н Тверская, 1
+				//========== Подробнее о задаче ==========
+				button.btn-outline(frame-btn="task-description") Подробнее о задаче
 						
 					
 				.stage-work__btn
@@ -78,7 +55,29 @@ block content
 				svg.svg-profile
 					use(href="./img/spriteSvg.svg#svg-profile")
 				span Профиль
+	
+	//======== task-description popUp =========
+	.task-description.modal-frame-wrapper(frame-modal="task-description")
+		.modal-frame
+			.icon-close(frame-close)
+			.tc__body
+				//=========== task description =========
+				.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
+				
+				.tc__price Потенциальная оплата: #[span 20 000] ₽ 
 
+				.tc__date
+					.tc__cell Дата начало: #[span 08.10.23] в 
+					.tc__cell Дата окончания: #[span 18.10.23] в #[span 19:00]
+
+				.tc__time
+					.time-start Время начала труд. дня: #[span  9:00] 
+					.time-finish Время окончания  труд. дня: #[span 19:00]
+				
+				.tc__contractor Кол-во людей: #[span 6]
+				
+				.tc__requir Требования к форме: требуется, выдадут на месте
+				a(href="location-page.html").link-right Показать на карте
 
 block variables
 	-var title = "Задача. Завершить";

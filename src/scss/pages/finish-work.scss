@@ -4,22 +4,19 @@
 	display: flex;
 	.container {display: flex;}
 }
-.ios-device .stage-work {
-	height: calc(100vh - remy(80));}
+
 .stage-work__content{
 	display: flex;
 	flex-direction: column;
 	row-gap:1rem;
 	&>*{width: 100%; }
 	
-	// .stage-work__btn{margin-top: auto;}
 	.stage-work__btn{
 		position: fixed;
-		top: calc(100vh - ((100vh - 100dvh) + remy(165)));
+		top: calc(100vh - ((100vh - 100dvh) + remy(200)));
 		width: remy(300);
 		left:50%;
 		transform: translateX(-50%);
 	}
-	.hide-details{height: calc(100vh - 32rem)}
 	
 }

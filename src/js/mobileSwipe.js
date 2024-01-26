@@ -108,26 +108,12 @@ Swipe.prototype.run = function () {
 		this.handleTouchMove(evt);
 	}.bind(this), false);
 };
-const swipeBlock1 = document.querySelector('#swipe1');
-const swipeBlock2 = document.querySelector('#swipe2');
-const swipeBlock3 = document.querySelector('#swipe3');
-if (swipeBlock1){
-	var swiper1 = new Swipe('#swipe1');
-	swiper1.onUp(()=>upHandler(swiper1.element));
-	swiper1.onDown(()=>downHandler(swiper1.element));
-	swiper1.run();
-}
-if (swipeBlock2) {
-	var swiper2 = new Swipe('#swipe2');
-	swiper2.onUp(() => upHandler(swiper2.element));
-	swiper2.onDown(()=>downHandler(swiper2.element));
-	swiper2.run();
-}
-if (swipeBlock3) {
-	var swiper3 = new Swipe('#swipe3');
-	swiper3.onUp(() => upHandler(swiper3.element));
-	swiper3.onDown(()=>downHandler(swiper3.element));
-	swiper3.run();
+const swipeBlock = document.querySelector('#swipe');
+if (swipeBlock){
+	var swiper = new Swipe('#swipe');
+	swiper.onUp(()=>upHandler(swiper.element));
+	swiper.onDown(()=>downHandler(swiper.element));
+	swiper.run();
 }
 
 function upHandler(element){
