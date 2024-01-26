@@ -22,27 +22,29 @@ block content
 
 				//========== скрытый блок ==========
 				.hide-details.tc__body
-					.hide-details__close.toggle-class-remove
-						p Подробнее о задаче
-						svg.svg-chevron
-							use(href="./img/spriteSvg.svg#svg-chevron")
+					.hide-details__close.toggle-class-remove(frame-btn="task-description")
+						button.btn-outline Подробнее о задаче
 						
-					//=========== task description =========
-					.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
-					
-					.tc__price Потенциальная оплата: #[span 20 000] ₽ 
+	.task-description.modal-frame-wrapper(frame-modal="task-description")
+		.modal-frame
+			.icon-close(frame-close)
+			.tc__body
+				//=========== task description =========
+				.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
 				
-					.tc__date
-						.tc__cell Дата начало: #[span 08.10.23] в 
-						.tc__cell Дата окончания: #[span 18.10.23] в #[span 19:00]
+				.tc__price Потенциальная оплата: #[span 20 000] ₽ 
 
-					.tc__time
-						.time-start Время начала труд. дня: #[span  9:00] 
-						.time-finish Время окончания  труд. дня: #[span 19:00]
-					
-					.tc__contractor Кол-во людей: #[span 6]
-					
-					.tc__requir Требования к форме: требуется, выдадут на месте
+				.tc__date
+					.tc__cell Дата начало: #[span 08.10.23] в 
+					.tc__cell Дата окончания: #[span 18.10.23] в #[span 19:00]
+
+				.tc__time
+					.time-start Время начала труд. дня: #[span  9:00] 
+					.time-finish Время окончания  труд. дня: #[span 19:00]
+				
+				.tc__contractor Кол-во людей: #[span 6]
+				
+				.tc__requir Требования к форме: требуется, выдадут на месте
 	//============= FOOTER =============
 	footer.nav-menu-panel
 		nav.nav-menu
