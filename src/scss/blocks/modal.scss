@@ -29,26 +29,22 @@
 	justify-content: center;
 	align-items: flex-start;
 	padding-top: remy(50);
-	padding-bottom: remy(50);
+	padding-bottom: remy(20);
 	
-	@media (max-width: remy(767)) {
-		padding-top: remy(30);
-		padding-bottom: remy(30);
-	}
 }
 
 .modal-frame{
 	position: relative;
-	border-radius: remy(20);
+	border-radius: remy(8);
 	background: $white;
 	width: 100%;
 	max-width: remy(1000);
-	padding:remy(24);
-    border-radius: 1rem;
+	padding: remy(16);
+    border-radius: 0;
 	.icon-close {
 		position: absolute;
-		top: remy(24);
-		right: remy(24);
+		top: remy(10);
+		right: remy(10);
 		transition: .3s;
 		z-index: 3;
 
@@ -56,15 +52,7 @@
 			opacity: .5;
 		}
 	}
-	@media (max-width: remy(1199)) {
-		border-radius: remy(12);
-		padding: remy(16);
-		.icon-close{
-			top: remy(10);
-			right:remy(10);
-		}
-	}
-		@media (max-width: remy(767)) {border-radius: remy(8);}
+	
 }
 .icon-close {
 	height: remy(24);
@@ -83,12 +71,9 @@
 }
 .modal-frame.modal-frame--small{
 	width: auto;
-	min-width: remy(370);
+	width: remy(360);
 	height: auto;
-	@media(max-width:remy(399)){
-		min-width: 100%;
-		padding: remy(16);
-	}
+	padding: remy(16);
 	
 }
 .modal-header__flex{
