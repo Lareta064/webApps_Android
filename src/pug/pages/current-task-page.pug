@@ -30,7 +30,7 @@ block content
 					button.btn-outline(frame-btn="task-description") Подробнее о задаче
 					
 					.tc__footer.mt-20
-						a(href="#!" frame-btn="location").btn Выезд на объект
+						a(href="large-22-23.html" ).btn Выезд на объект
 						a(href="chat-page.html" ).btn-outline.link-right
 							span Чат с оператором
 						
@@ -61,97 +61,44 @@ block content
 					use(href="./img/spriteSvg.svg#svg-profile")
 				span Профиль
 
-	//========== макет 22-23  вкладка На карте =========
-	.single-task-location.single-task--current.toggle-class(frame-modal="location")
-		.custom-container.flex-column
-			.fix-header
-				button.btn-back.btn-round(frame-close)
-			//========= map ==========
-			.single-task-map
-				script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A13e02d731c04b56220a2a064d1fa54db38ac5402f907fd4bdf75e632a107fa8e&width=100%&height=100%&lang=ru_RU&scroll=false')
+	//- //========== макет 22-23  вкладка На карте =========
+	//- .single-task-location.single-task--current.toggle-class(frame-modal="location")
+	//- 	.custom-container.flex-column
+	//- 		.fix-header
+	//- 			button.btn-back.btn-round(frame-close)
+	//- 		//========= map ==========
+	//- 		.single-task-map
+	//- 			script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A13e02d731c04b56220a2a064d1fa54db38ac5402f907fd4bdf75e632a107fa8e&width=100%&height=100%&lang=ru_RU&scroll=false')
 
 			
-			//========= карточка с описанием ==========
-			.single-task-details.box-shadow
+	//- 		//========= карточка с описанием ==========
+	//- 		.single-task-details.box-shadow
 				
-				.visible-details
-					.hide-details__open.toggle-class-add#swipe1
+	//- 			.visible-details
+	//- 				.hide-details__open.toggle-class-add#swipe1
 					
-					.tc__header Название задачи, которое может переноситья на следующую строку, а потом и на ещё 1
+	//- 				.tc__header Название задачи, которое может переноситья на следующую строку, а потом и на ещё 1
 					
-					.tc__location МО, г. Москва, Тверской рай-н Тверская, 1
+	//- 				.tc__location МО, г. Москва, Тверской рай-н Тверская, 1
 
-					button(frame-btn="visit-location").btn Прибыл(а) на объект
+	//- 				button(frame-btn="visit-location").btn Прибыл(а) на объект
 					
-					.simple-card
-						p Обратный отсчёт:
-						p.txt-accent.title-20 22 ч. 53 мин. 20 сек.
-						p.txt-14 Осталось времени до выезда на объект				
+	//- 				.simple-card
+	//- 					p Обратный отсчёт:
+	//- 					p.txt-accent.title-20 22 ч. 53 мин. 20 сек.
+	//- 					p.txt-14 Осталось времени до выезда на объект				
 				
 				
 				
-				.hide-details.tc__body
-					.hide-details__close
-						p Подробнее о задаче
-						svg.svg-chevron
-							use(href="./img/spriteSvg.svg#svg-chevron")
+	//- 			.hide-details.tc__body
+	//- 				.hide-details__close
+	//- 					p Подробнее о задаче
+	//- 					svg.svg-chevron
+	//- 						use(href="./img/spriteSvg.svg#svg-chevron")
 						
 					
 
-	//========== макет 24 -  вкладка ВЫЕЗД НА ОБЪЕКТ =========
-	.single-task-location.single-task--current.toggle-class(frame-modal="visit-location")
-		.custom-container.flex-column
-			.fix-header.fix-header--visit
-				.btn-round-white
-					span.clock-icon
-				p Обратный отсчёт завершён. Необходимо начать работу
-				button.btn-back.btn-round(frame-close)
-			
-			//========= map ==========
-			.single-task-map
-				script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A13e02d731c04b56220a2a064d1fa54db38ac5402f907fd4bdf75e632a107fa8e&width=100%&height=100%&lang=ru_RU&scroll=false')
-			
-			//========= карточка с описанием ==========
-			.single-task-details.box-shadow
-				//==========видимая часть ==========
-				.visible-details
-					.hide-details__open.toggle-class-add#swipe2
-					
-					.tc__header Название задачи, которое может переноситья на следующую строку, а потом и на ещё 1
-					
-					.tc__location МО, г. Москва, Тверской рай-н Тверская, 1
-
-					button(frame-btn="start-work").btn Прибыл(а) на объект
-					
-					.simple-card
-						p Обратный отсчёт:
-						p.txt-accent.title-20 22 ч. 53 мин. 20 сек.
-						p.txt-14 Осталось времени до выезда на объект
-				
-				
-				//========== скрытый блок ==========
-				.hide-details.tc__body
-					.hide-details__close.toggle-class-remove
-						p Подробнее о задаче
-						svg.svg-chevron
-							use(href="./img/spriteSvg.svg#svg-chevron")
-						
-					//=========== task description =========
-					.tc__text Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
-					
-					.tc__price Потенциальная оплата: #[span 20 000] ₽ 
-				
-					.tc__date
-						.tc__cell Дата начало: #[span 08.10.23] в 
-						.tc__cell Дата окончания: #[span 18.10.23] в #[span 19:00]
-
-					.tc__time
-						.time-start Время начала труд. дня: #[span  9:00] 
-						.time-finish Время окончания  труд. дня: #[span 19:00]
-					
-					.tc__contractor Кол-во людей: #[span 6]
-					
-					.tc__requir Требования к форме: требуется, выдадут на месте
+	
 
 	//========== макет 25 - вкладка НАЧАЛ ВЫПОЛНЕНИЕ РАБОТЫ =========
 	.single-task-location.single-task--current.toggle-class(frame-modal="start-work")
