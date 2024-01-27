@@ -43,7 +43,7 @@
 	z-index: 5;
 	height: 42vh;
 	padding: remy(16);
-	transform: translateY(calc(42vh - 90px ));
+	transform: translateY(calc(100% - 180px ));
 	transition: .3s; 
 }
 .toggle-class.open .profile-location-form{transform: translateY(0);}

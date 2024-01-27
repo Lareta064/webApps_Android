@@ -39,7 +39,7 @@
 }
 .single-task-details {
 	position: absolute;
-	padding: remy(24) remy(16) 4.25rem;
+	padding: remy(24) remy(16) calc(100vh - 96dvh);
 	transition: .3s; 
 	bottom: 0;
 	z-index: 2;
